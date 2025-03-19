@@ -4,3 +4,9 @@ h1{
     font-size: 3em;
     color: rgb(23, 205, 255);
 }
+
+nav {
+    background-color: rgb(203, 161, 235);
+    height: 100px;
+    width: 120px;  
+}
