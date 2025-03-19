@@ -6,7 +6,7 @@ h1{
 }
 
 nav {
-    background-color: rgb(203, 161, 235);
+    background: rgb(203, 161, 235);
     height: 100px;
     width: 120px;  
 }
