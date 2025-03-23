@@ -1,12 +1,14 @@
 .navbar {
     background: rgb(203, 161, 235);
+    font-family: "Fascinate", system-ui;
+    font-size: 18px;
     /*height: 100px;
     width: 120px; */
 }
 
 .navlinks a{
     
-    font-family: fantasy;
+    font-family: "Fascinate", system-ui;
     font-size: 18px;
     text-decoration: none;
     color:#296ac8
@@ -18,23 +20,35 @@ body {
 }
 
 h1{
-    /*font-family: "Cormorant", serif;
-    text-align: center;
-    font-size: 5em;
-    font-style: italic;
-    color: rgb(146, 210, 245);*/
+    font-family: "League Script", cursive;
+    font-size: 40px;
     color: #296ac8
 }
 
+h2{
+    font-family: "Pompiere", sans-serif;
+    font-size: 35px;
+    color:#92d2f5;
+}
+
 .tester {
-    font-family: "Cormorant", serif;
+    font-family: "Pompiere", sans-serif;
     text-align: right;
     font-size: 30px;
-    color: rgb(146, 210, 245);
+    color: #92d2f5;
 }
 
 /*This is for the links underneath tester*/
 .tester a{
     text-decoration: none;
+    font-family: "Fascinate", system-ui;
     color: #296ac8;
+}
+
+/*this is the styling for the footer*/
+.ftr{
+    background: #296ac8;
+    font-family: "Fascinate", system-ui;
+    font-size: 18px;
+    color: #cba1eb;
 }
