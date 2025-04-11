@@ -1,0 +1,16 @@
+/* INDEX page CSS*/
+.tester {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #9dd7f7;
+}
+
+/*This is for the links underneath tester*/
+.tester a {
+    text-decoration: none;
+    font-family: "Patrick Hand", cursive;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #809bf7;
+}
