@@ -14,7 +14,7 @@
     font-size: 22px;
     font-weight: 600;
     text-decoration: none;
-    color:#5f75d1;
+    color:#6b8cf5;
     
 }
 
@@ -25,7 +25,7 @@ body {
 h1{
     font-family: "Indie Flower", cursive;
     font-size: 30px;
-    color: #5f75d1;
+    color: #6b8cf5;
 }
 
 h2{
@@ -50,12 +50,12 @@ h2{
     font-family: "Patrick Hand", cursive;
     font-size: 1.1rem;
     line-height: 1.5;
-    color: #5f75d1;
+    color: #6b8cf5;
 }
 
 /*this is the styling for the footer*/
 .ftr{
-    background: #5f75d1;
+    background: #6b8cf5;
     font-family: "Patrick Hand", cursive;
     font-size: 22px;
     font-weight: 600;
