@@ -1,17 +1,20 @@
 .navbar {
-    background: rgb(203, 161, 235);
-    font-family: "Pompiere", sans-serif;
-    font-size: 18px;
+    /*background: linear-gradient(to bottom, #3f1754, #663b85);*/
+    background: #3f1754;
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    font-weight: 600;
     /*height: 100px;
     width: 120px; */
 }
 
 .navlinks a{
     
-    font-family: "Pompiere", sans-serif;
-    font-size: 18px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    font-weight: 600;
     text-decoration: none;
-    color:#296ac8
+    color:#5f75d1;
     
 }
 
@@ -22,33 +25,39 @@ body {
 h1{
     font-family: "Indie Flower", cursive;
     font-size: 30px;
-    color: #296ac8
+    color: #5f75d1;
 }
 
 h2{
-    font-family: "Sue Ellen Francisco", cursive;
-    font-size: 35px;
-    color:#92d2f5;
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #aeeaff;
 }
 
 .tester {
-    font-family: "Sue Ellen Francisco", cursive;
-    text-align: right;
-    font-size: 30px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
     color: #92d2f5;
 }
 
 /*This is for the links underneath tester*/
 .tester a{
     text-decoration: none;
-    font-family: "Pompiere", sans-serif;
-    color: #296ac8;
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #5f75d1;
 }
 
 /*this is the styling for the footer*/
 .ftr{
-    background: #296ac8;
-    font-family: "Pompiere", sans-serif;
-    font-size: 18px;
-    color: #cba1eb;
+    background: #5f75d1;
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: #3f1754;
 }
