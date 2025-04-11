@@ -1,5 +1,5 @@
 /* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH!*/
-root{
+:root{
     --nav-bg: #3f1754;
     --nav-link: #809bf7;
     --hover-colour: #f0f8ff;
@@ -165,3 +165,26 @@ h2{
 ::-webkit-scrollbar:hover {
     background: linear-gradient(#fceea7, #fff7c1);
 }
+
+
+/*Setting up mobile responsiveness...IDK IF THIS WILL WORK*/
+@media (max-width: 768px) {
+    .navbar, .navlinks {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .site-title {
+      text-align: center;
+      font-size: 28px;
+    }
+  
+    body {
+      background-size: cover;
+      background-position: top;
+    }
+  
+    .tester {
+      font-size: 18px;
+    }
+  }
