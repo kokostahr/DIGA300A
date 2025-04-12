@@ -52,4 +52,11 @@ figure {
     align-items: left;
 }
 
-/*add something for the bottom navigation*/
+/*add something for the bottom navigation. put each thing in a box...*/
+.bot-navi {
+    padding: 80px;
+    margin: 5px 0;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    color: var(--text-colour);
+}
