@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Intro</title>
+    <title>Wireframing Process</title>
     <meta name="author" content="Star Nkosi">
     <meta name="description" content="This page contains Star's wireframing process.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/normalise.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="
+    https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar"> 
+            <figure> <img class="logo" src="../../images/star-logo.png" alt="logo of a star on a fishhook"></figure>
+            <h1 class="site-title">Starfish <br> Galaxy</h1>
                 <li>
                     <a href="../../index.html"> Homepage</a>
                 </li>
@@ -34,32 +44,33 @@
                 </li>
             </ul>
         </nav>
-        <h1> Starfish Galaxy</h1>
     </header>
 
     <main>
         <article class="h-entry" data-article-type="design-blog">
-            <h2 class="p-name"> Wireframing Process continued...  </h2>
-            <p>
-                by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
-            </p>
-            <p>
-                <!--I dont remember the actual date I posted this!!-->
-                Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
-                Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
-            </p>
-            <p class="p-summary">
-               In this design post, Star speaks about her wireframing process. 
-            </p>
-
-            <section data-type="reflection-and-thoughts">
+            <div class="introContainer">
+                <h2 class="p-name"> Wireframing Process continued...  </h2>
                 <p>
-                    I have already covered the beginning stages of my wireframing process in my blog post for 
-                    <a href="../../blogs/academic/week-2-blog-post.html"> week 2 </a> and <a href="../../blogs/academic/week-4-blog-post.html">
-                    week 4</a>. This design section will continue from where I left off in week 4. Please do read it to understand the 
-                    development of my wireframing process.
+                    by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
                 </p>
-            </section>
+                <p>
+                    <!--I dont remember the actual date I posted this!!-->
+                    Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
+                    Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
+                </p>
+                <p class="p-summary">
+                In this design post, Star speaks about her wireframing process. 
+                </p>
+
+                <section data-type="reflection-and-thoughts">
+                    <p>
+                        I have already covered the beginning stages of my wireframing process in my blog post for 
+                        <a href="../../blogs/academic/week-2-blog-post.html"> week 2 </a> and <a href="../../blogs/academic/week-4-blog-post.html">
+                        week 4</a>. This design section will continue from where I left off in week 4. Please do read it to understand the 
+                        development of my wireframing process.
+                    </p>
+                </section>
+            </div>
 
             <section>
                 <h3> Continuing where we left off...</h3>
@@ -220,7 +231,7 @@
             </section>
         </article>
 
-        <ul>
+        <ul class="bot-navi">
             <li>
                 <a href="../design-homepage.html"> Back To Design Homepage</a>
             </li>
@@ -230,7 +241,7 @@
         </ul>
     </main>
 
-    <footer>
+    <footer class="ftr">
         Copyrighted by me. No stealing! Wits Digital Arts
     </footer>
 </body>

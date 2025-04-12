@@ -6,11 +6,21 @@
     <title>Ux/Ui Considerations</title>
     <meta name="author" content="Star Nkosi">
     <meta name="description" content="This page explores Star's overall Ux and Ui goals.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/normalise.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="
+    https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar"> 
+            <figure> <img class="logo" src="../../images/star-logo.png" alt="logo of a star on a fishhook"></figure>
+            <h1 class="site-title">Starfish <br> Galaxy</h1>
                 <li>
                     <a href="../../index.html"> Homepage</a>
                 </li>
@@ -34,31 +44,33 @@
                 </li>
             </ul>
         </nav>
-        <h1> Starfish Galaxy</h1>
     </header>
 
     <main>
         <article class="h-entry" data-article-type="design-blog">
-            <h2 class="p-name"> User Experience and User Interface Considerations  </h2>
-            <p>
-                by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
-            </p>
-            <p>
-                <!--I dont remember the actual date I posted this!!-->
-                Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
-                Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
-            </p>
-            <p class="p-summary">
-               In this design post, Star speaks about her UI/UX goals and how her Interaction and Design process helped her design a website 
-               that aligns with her goals. 
-            </p>
-
-            <section data-type="reflection-and-thoughts">
+            <div class="introContainer">
+                <h2 class="p-name"> User Experience and User Interface Considerations  </h2>
                 <p>
-                    I have already discussed my UI and UX considerations within <a href="../../blogs/academic/week-3-blog-post.html"> 
-                    week 3's </a> blog post. In this post, I will go a bit more in-depth with that. 
+                    by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
                 </p>
-            </section>
+                <p>
+                    <!--I dont remember the actual date I posted this!!-->
+                    Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
+                    Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
+                </p>
+                <p class="p-summary">
+                In this design post, Star speaks about her UI/UX goals and how her Interaction and Design process helped her design a website 
+                that aligns with her goals. 
+                </p>
+
+                <section data-type="reflection-and-thoughts">
+                    <p>
+                        I have already discussed my UI and UX considerations within <a href="../../blogs/academic/week-3-blog-post.html"> 
+                        week 3's </a> blog post. In this post, I will go a bit more in-depth with that. 
+                    </p>
+                </section>
+            </div>
+            
 
             <section>
                 <h3> User Experience Goals</h3>
@@ -128,7 +140,7 @@
             </section>
         </article>
 
-        <ul>
+        <ul class="bot-navi">
             <li>
                 Previous Design Post: <a href="design-wireframes.html"> Wireframing process continued...</a>
             </li>
@@ -141,7 +153,7 @@
         </ul>
     </main>
 
-    <footer>
+    <footer class="ftr">
         Copyrighted by me. No stealing! Wits Digital Arts 2025
     </footer>
 </body>

@@ -11,12 +11,6 @@
     --scrollbar-yellow: #fceea7;
 }
 
-/*trying to put the webpage into a box???*/
-main {
-    padding: 80px;
-    margin: 5px 0;
-    border-radius: 10px;
-}
 
 /*Let's do a set colour for the headings*/
 .p-name {

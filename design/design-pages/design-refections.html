@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Design Reflections</title>
     <meta name="description" content="This section of the website was used as a space to reflect on the whole development process of the website
     as whole. Contains a lot of wondering, rants and strongly opinionated thoughts.">
+    <link rel="stylesheet" href="../../styles/normalise.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="
+    https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar"> 
+            <figure> <img class="logo" src="../../images/star-logo.png" alt="logo of a star on a fishhook"></figure>
+            <h1 class="site-title">Starfish <br> Galaxy</h1>
                 <li>
                     <a href="../../index.html"> Homepage</a>
                 </li>
@@ -34,23 +43,24 @@
                 </li>
             </ul>
         </nav>
-        <h1> Starfish Galaxy</h1>
     </header>
 
     <main>
         <article class="h-entry" data-article-type="blog">
-            <h2 class="p-name"> Reflections  </h2>
-            <p>
-                by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
-            </p>
-            <p>
-                <!--I dont remember the actual date I posted this!!-->
-                Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
-                Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
-            </p>
-            <p class="p-summary">
-               In this design post, Star shares her thoughts and reflections concerning the overall process of building her website. 
-            </p>
+           <div class="introContainer">
+                <h2 class="p-name"> Reflections  </h2>
+                <p>
+                    by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
+                </p>
+                <p>
+                    <!--I dont remember the actual date I posted this!!-->
+                    Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
+                    Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
+                </p>
+                <p class="p-summary">
+                In this design post, Star shares her thoughts and reflections concerning the overall process of building her website. 
+                </p>
+        </div>
 
             <section data-type="thoughts and reflection-and-thoughts">
                 <h3> Reflections for Assignment 1 Submission</h3>
@@ -93,7 +103,7 @@
           -->
         </article>
 
-        <ul>
+        <ul class="bot-navi">
             <li>
                 Previous Design Post: <a href="design-style-guide.html"> Style Guides</a>
             </li>
@@ -103,7 +113,7 @@
         </ul>
     </main>
 
-    <footer>
+    <footer class="ftr">
         Copyrighted by me. No stealing! Wits Digital Arts 2025
     </footer>
 </body>

@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Design Style Guide</title>
     <meta name="author" content="Star Nkosi">
     <meta name="description" content="This section of the website take's a look at Star's style guide process.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/normalise.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="
+    https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar"> 
+            <figure> <img class="logo" src="../../images/star-logo.png" alt="logo of a star on a fishhook"></figure>
+            <h1 class="site-title">Starfish <br> Galaxy</h1>
                 <li>
                     <a href="../../index.html"> Homepage</a>
                 </li>
@@ -34,32 +44,34 @@
                 </li>
             </ul>
         </nav>
-        <h1> Starfish Galaxy</h1>
     </header>
 
     <main>
         <article class="h-entry" data-article-type="blog">
-            <h2 class="p-name"> Style Guide  </h2>
-            <p>
-                by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
-            </p>
-            <p>
-                <!--I dont remember the actual date I posted this!!-->
-                Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
-                Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
-            </p>
-            <p class="p-summary">
-               In this design post, Star goes through the her design choices, concerning her style guide. This section is will continuously be 
-               updated as changes are made to the style guide, and more interface elements are designed.
-            </p>
-
-            <!-- <section data-type="reflection-and-thoughts">
+            <div class="introContainer">
+                <h2 class="p-name"> Style Guide  </h2>
                 <p>
-                    I have covered the in-depth style guide within <a href="../../blogs/academic/week-5-blog-post.html"> week 5's </a> blog 
-                    post.
+                    by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
                 </p>
-            </section> -->
+                <p>
+                    <!--I dont remember the actual date I posted this!!-->
+                    Published: <time class="dt-published" datetime="2025-03-17">17 March 2025</time> <br>
+                    Last updated: <time class="dt-update" datetime="2025-03-17"> 17 March 2025</time>
+                </p>
+                <p class="p-summary">
+                In this design post, Star goes through the her design choices, concerning her style guide. This section is will continuously be 
+                updated as changes are made to the style guide, and more interface elements are designed.
+                </p>
 
+                <!-- <section data-type="reflection-and-thoughts">
+                    <p>
+                        I have covered the in-depth style guide within <a href="../../blogs/academic/week-5-blog-post.html"> week 5's </a> blog 
+                        post.
+                    </p>
+                </section> -->
+
+            </div>
+              
             <section>
                 <h3> Colour Palettes </h3>
 
@@ -121,7 +133,7 @@
             </section>
         </article>
 
-        <ul>
+        <ul class="bot-navi">
             <li>
                 Previous Design Post: <a href="design-uxui-considerations.html"> UX/UI Considerations</a>
             </li>
@@ -134,7 +146,7 @@
         </ul>
     </main>
 
-    <footer>
+    <footer class="ftr">
         Copyrighted by me. No stealing! Wits Digital Arts 2025
     </footer>
 </body>

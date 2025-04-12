@@ -96,6 +96,13 @@
     color: #fceea7;
 }
 
+/*trying to put the webpage into a box???*/
+main {
+    padding: 80px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
 /*Adding a subtle overlay because I lost the night sky colour!*/
 body::before {
     content: "";
