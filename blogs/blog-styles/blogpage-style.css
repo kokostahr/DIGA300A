@@ -24,6 +24,7 @@
     margin: 5px 0;
     border-radius: 10px;
     font-family: "Quicksand", sans-serif;
+    font-size: 18px;
     color: var(--text-colour);
 }
 

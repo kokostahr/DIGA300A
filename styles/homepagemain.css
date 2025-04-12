@@ -14,7 +14,7 @@
 
 .tester {
     font-family: "Quicksand", sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--text-colour);
 }
@@ -23,7 +23,7 @@
 .tester a {
     text-decoration: none;
     font-family: "Patrick Hand", cursive;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--nav-link);
 }
