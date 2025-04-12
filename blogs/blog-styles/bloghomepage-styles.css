@@ -9,6 +9,13 @@
     --bg-overlay:  rgba(22,6,73,0.6);
     --hover-yellow: #fceea7;
 }
+ 
+/*trying to put the webpage into a box???*/
+main {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
 
 h3 {
     padding: 20px;
@@ -21,9 +28,7 @@ h3 {
 }
 
 section {
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 10px;
+    
     font-family: "Quicksand", sans-serif;
     font-size: 18px;
     line-height: 1.5;

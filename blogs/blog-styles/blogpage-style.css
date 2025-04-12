@@ -11,6 +11,13 @@
     --scrollbar-yellow: #fceea7;
 }
 
+/*trying to put the webpage into a box???*/
+main {
+    padding: 80px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
 /*Let's do a set colour for the headings*/
 .p-name {
     font-family: "Quicksand", sans-serif;
@@ -19,10 +26,16 @@
     color: var(--text-colour);
 }
 
+.p-author h-card a {
+    color: var(--nav-link);
+    transition: color 0.5 ease;
+}
+
+.p-author h-card a:hover {
+    color: var(--scrollbar-yellow);
+}
+
 .h-entry {
-    padding: 80px;
-    margin: 5px 0;
-    border-radius: 10px;
     font-family: "Quicksand", sans-serif;
     font-size: 18px;
     color: var(--text-colour);
@@ -55,9 +68,6 @@ figure {
 
 /*something for the reference list. add a box around the whole thing*/
 .refe {
-    padding: 20px;
-    margin: 5px 0;
-    border-radius: 10px;
     font-family: "Quicksand", sans-serif;
     color: var(--text-colour);
     
@@ -79,9 +89,6 @@ figure {
 
 /*add something for the bottom navigation. put each thing in a box...*/
 .bot-navi {
-    padding: 20px;
-    margin: 5px 0;
-    border-radius: 10px;
     font-family: "Quicksand", sans-serif;
     color: var(--text-colour);
 }
