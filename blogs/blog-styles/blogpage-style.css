@@ -9,8 +9,19 @@
     --footer: rgba(170, 140, 245, 0.3); 
     --bg-overlay:  rgba(22,6,73,0.6);
     --scrollbar-yellow: #fceea7;
+    --intro-overlay: rgba(170, 140, 245, 0.1);
 }
 
+/*placing the top of the blog posts inside a nice box?*/
+.introContainer {
+    background: var(--intro-overlay);
+    border: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: var(--hover-colour);
+    margin: 2rem;
+    padding: 1rem;
+}
 
 /*Let's do a set colour for the headings*/
 .p-name {
@@ -56,8 +67,15 @@
   color: var(--heading-colour) ; 
 }
 
-figure {
-    align-items: left;
+.p-summary {
+    font-style: italic;
+}
+
+/*This is for the images within the paragraphs. Please work T^T*/
+.pictextContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*something for the reference list. add a box around the whole thing*/

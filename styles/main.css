@@ -69,7 +69,6 @@
 /* Removing the list of the unordered list (ul)*/
 .navlinks ul li {
     list-style-type: none;
-   
 }
 
 .navlinks a{
@@ -96,11 +95,10 @@
     color: #fceea7;
 }
 
-/*trying to put the webpage into a box???*/
 main {
+    margin: 10px 0;
     padding: 80px;
-    margin: 5px 0;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 /*Adding a subtle overlay because I lost the night sky colour!*/
