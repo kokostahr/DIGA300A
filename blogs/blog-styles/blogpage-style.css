@@ -52,11 +52,48 @@ figure {
     align-items: left;
 }
 
-/*add something for the bottom navigation. put each thing in a box...*/
-.bot-navi {
-    padding: 80px;
+/*something for the reference list. add a box around the whole thing*/
+.refe {
+    padding: 20px;
     margin: 5px 0;
     border-radius: 10px;
     font-family: "Quicksand", sans-serif;
     color: var(--text-colour);
+    
+}
+
+.refe ul {
+    list-style: square;
+}
+
+.refe a {
+    font-style: none;
+    color: var(--nav-link);
+    text-decoration: none;
+}
+
+.refe a:hover {
+    color: var(--scrollbar-yellow)
+}
+
+/*add something for the bottom navigation. put each thing in a box...*/
+.bot-navi {
+    padding: 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    color: var(--text-colour);
+}
+
+.bot-navi a {
+    color: var(--nav-link);
+    text-decoration : none;
+}
+
+.bot-navi a:hover {
+    color: var(--scrollbar-yellow);
+}
+
+.bot-navi ul {
+    list-style-type: square;
 }
