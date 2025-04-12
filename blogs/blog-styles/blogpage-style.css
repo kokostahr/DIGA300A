@@ -82,6 +82,13 @@
 .refe {
     font-family: "Quicksand", sans-serif;
     color: var(--text-colour);
+    background: var(--intro-overlay);
+    border: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: var(--hover-colour);
+    margin: 2rem;
+    padding: 1rem;
     
 }
 
