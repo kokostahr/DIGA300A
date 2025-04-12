@@ -1,5 +1,3 @@
-/* INDEX page CSS*/
-/* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH!*/
 :root{
     --nav-bg: #3f1754;
     --nav-link: #809bf7;
@@ -9,21 +7,34 @@
     --text-colour: #9dd7f7;
     --footer: rgba(170, 140, 245, 0.3); 
     --bg-overlay:  rgba(22,6,73,0.6);
-    --scrollbar-yellow: #fceea7;
+    --hover-yellow: #fceea7;
 }
 
-.tester {
+h3 {
     font-family: "Quicksand", sans-serif;
     font-size: 24px;
     line-height: 1.5;
     color: var(--text-colour);
 }
 
-/*This is for the links underneath tester*/
-.tester a {
-    text-decoration: none;
-    font-family: "Patrick Hand", cursive;
-    font-size: 24px;
+section {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
     line-height: 1.5;
+    color: var(--text-colour);
+}
+
+section ul {
+    list-style-type: square;
+}
+
+section a {
     color: var(--nav-link);
+    font-weight: 600;
+    list-style: square;
+    text-decoration: none;
+}
+
+section a:hover {
+    color: var(--hover-yellow);
 }

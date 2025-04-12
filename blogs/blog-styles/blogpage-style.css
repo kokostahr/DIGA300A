@@ -1,0 +1,55 @@
+/* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH!*/
+:root{
+    --nav-bg: #3f1754;
+    --nav-link: #809bf7;
+    --hover-colour: #f0f8ff;
+    --webpage-bg: #160649;
+    --heading-colour: #aeeaff;
+    --text-colour: #9dd7f7;
+    --footer: rgba(170, 140, 245, 0.3); 
+    --bg-overlay:  rgba(22,6,73,0.6);
+    --scrollbar-yellow: #fceea7;
+}
+
+/*Let's do a set colour for the headings*/
+.p-name {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--text-colour);
+}
+
+.h-entry {
+    padding: 80px;
+    margin: 5px 0;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    color: var(--text-colour);
+}
+
+.h-entry a {
+    color: var(--nav-link);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.h-entry a:hover {
+    color: var(--hover-colour);
+}
+
+.h-entry time {
+    font-style: italic;
+    color: var(--scrollbar-yellow);
+}
+
+.h-entry .p-summary {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: var(--heading-colour) ; 
+}
+
+figure {
+    align-items: left;
+}
+
+/*add something for the bottom navigation*/
