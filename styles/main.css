@@ -11,6 +11,12 @@
     --scrollbar-yellow: #fceea7;
 }
 
+
+.sitenamelogo {
+    display: flex;
+    align-items: flex-start;
+}
+
 /*this is how I want the name of the website to be called*/
 .site-title {
     font-size: 36px;
@@ -23,6 +29,7 @@
 
 /* this is the logo for my website*/
 .logo{
+    display: flex;
     width: 100px;
     height: auto;
     align-items: left;
@@ -45,8 +52,8 @@
 /*Setting up the flexbox for the navbar...let's see if this works*/
 .navlinks {
    display: flex; 
-   gap: 25px;
-   justify-content: centre;
+   gap: 20px;
+   justify-content: center;
    list-style: none;
    padding: 0;
    margin: 0;
@@ -61,10 +68,6 @@
     margin: 0;
 }
 
-/* Aligning the items straight....*/
-.navbar .navlinks {
-    justify-content: space-between;
-}
 
 /* Removing the list of the unordered list (ul)*/
 .navlinks ul li {
@@ -77,10 +80,8 @@
     font-weight: 600;
     text-decoration: none;
     color:#809bf7;   
-    padding: 8px 12px;
-    border-radius: 10px;
-    /*transition: background-color 0.5 ease, color 0.5 ease;*/
-    transition: color 0.5 ease;
+    padding: 1rem;
+    border-radius: 6;
 }
 
 /* IDK what this is for yet*/
@@ -160,12 +161,12 @@ h2 {
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(#809bf7, #fceea7);
     border-radius: 6px;
+    animation: gradient 15s ease infinite;
 }
 
 ::-webkit-scrollbar:hover {
     background: linear-gradient(#fceea7, #fff7c1);
 }
-
 
 /*Setting up mobile responsiveness...IDK IF THIS WILL WORK*/
 @media (max-width: 768px) {

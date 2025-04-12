@@ -82,6 +82,7 @@
 .refe {
     font-family: "Quicksand", sans-serif;
     font-size: 20px;
+    font-style: none;
     color: var(--text-colour);
     background: var(--intro-overlay);
     border: solid;
@@ -110,6 +111,7 @@
 /*add something for the bottom navigation. put each thing in a box...*/
 .bot-navi {
     font-family: "Quicksand", sans-serif;
+    font-weight: 700;
     color: var(--text-colour);
     display: flex;
     justify-content: space-around;
@@ -130,6 +132,9 @@
 
 .bot-navi a:hover {
     color: var(--scrollbar-yellow);
+    /*color:#160649;
+    background: linear-gradient(30deg, var(--hover-colour) , var(--scrollbar-yellow));
+    animation: gradient 15s ease infinite;*/
 }
 
 /*putting a box around each link*/
