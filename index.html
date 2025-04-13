@@ -8,7 +8,6 @@
     <meta name="keywords" content="animation, game design, 3D modelling, programming, coding, 2d animation, essay, portfolio">
     <meta name="description" content="Star's first website, developed for assesment and for showcasing her development progress 
     as an interactive media student. This is the homepage.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalise.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/homepagemain.css"/>
@@ -52,8 +51,9 @@
     </header>
        
         <!-- Going to add links to eveyrthing else -->
-     <main class="tester">
-        <h2 class="p-name"> Welcome to Star's website</h2>
+     <main>
+        <div class="h-entry">
+            <h2 class="p-name"> Welcome to Star's website</h2>
 
         <div class="indexContainer">
             <figure>
@@ -69,13 +69,46 @@
         </div>
 
         <section class="links" data-type="assesment-links">
-            <p>
-                <a class="u-url" href="https://github.com/kokostahr"> My github</a>
-            </p>
-            <p>
-                <a class="u-url" href="https://kokostahr.github.io/DIGA300A/"> My Website </a>
-            </p>
+            <a class="u-url" href="profile/profilehomepage.html"> About Star </a>
+            <a class="u-url" href="https://github.com/kokostahr"> Star's GitHub</a>
+            <a class="u-url" href="https://kokostahr.github.io/DIGA300A/"> Star's Website </a>
+            <a class="u-url" href="https://www.youtube.com/@Koko_stahp"> Star's Youtube</a>
         </section>
+       
+
+        <section>
+            <h3> Latest Works </h3>
+            <div class="fakeCaro">
+                <article class="work-card">
+                    <video loop autoplay muted src="portfolio/development/game-dev/dressupGameplay.mp4" width="290" height="190"></video>
+                    <p class="caption">
+                        Prototype: Dress Up Gameplay. Play against an AI and compete in themed outfit challenges!
+                    </p>
+                    <a class="u-url" href="portfolio/portfolio-index.html"> View More...</a>
+                </article>
+
+                <article class="work-card">
+                   <h4> Week 7: Review of Websites</h4>
+                   <p>
+                    In this blog post Star looks at a South Africa nail beauty brand's website, and does a light analysis
+                    on the UI & UX pros and cons of the website...    
+                   </p>
+                   <a class="u-url" href="blogs/academic/week-7-blog-post.html"> Read More...</a>
+                </article>
+
+                <article class="work-card">
+                    <h4> Design Reflections</h4>
+                    <p>
+                        14 April Updated. A deeper look into the design decisions, thought processes
+                        and growth experienced while building Starfish Galaxy.
+                    </p>
+                    <a class="u-url" href="design/design-pages/design-refections.html"> Read More...</a>
+                </article>
+
+            </div>
+        </section>
+        </div>
+        <a class="backToTopBtn" href="#">Back to top</a>
      </main>
    
      <footer class="ftr">

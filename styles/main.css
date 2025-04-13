@@ -8,17 +8,18 @@
     --text-colour: #9dd7f7;
     --footer: rgba(170, 140, 245, 0.3); 
     --bg-overlay:  rgba(22,6,73,0.6);
-    --scrollbar-yellow: #fceea7;
+    --hover-yellow: #fceea7;
+    --intro-overlay: rgba(170, 140, 245, 0.1);
 }
 
 
 
 .navbar {
-    background: #3f1754;
+    background: var(--nav-bg);
     font-family: "Patrick Hand", cursive;
     font-size: 22px;
     font-weight: 600;
-    color: #f0f8ff;
+    color: var(--hover-colour);
     padding: 10px 40px;
     display: flex;
     justify-content: space-between;
@@ -36,7 +37,7 @@
     font-size: 36px;
     font-family: "Indie Flower", cursive;
     text-align: left;
-    color:#809bf7;
+    color:var(--nav-link);
     line-height: 1.2;
     white-space: nowrap;
 }
@@ -67,7 +68,7 @@
     font-size: 22px;
     font-weight: 600;
     text-decoration: none;
-    color:#809bf7;   
+    color:var(--nav-link);   
     padding: 1rem;
     border-radius: 6px;
 }
@@ -75,7 +76,7 @@
 /*Adding a hover effect to the buttons of the navbar*/
 .navlinks a:hover {
    /* background-color: linear-gradient(to-right, #f0f8ff, #f1cbfe);*/
-    color: #fceea7;
+    color: var(--hover-yellow);
     animation: slideInRight 2s ease forwards;
     opacity: 0;
 }
@@ -91,13 +92,13 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(22,6,73,0.6);
+    background: var(--bg-overlay);
     z-index: -1;
 }
 
 /* Adding the starry background*/
 body {
-    background: #160649;
+    background: var(--webpage-bg);
     /*Adding the image I made for the background*/
     background-image: url("../design/design-images/interactive-elements/background-example.png");
     background-size: cover;
@@ -118,7 +119,7 @@ h2 {
     font-family: "Quicksand", sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #aeeaff;
+    color: var(--heading-colour);
 }
 
 /*this is the styling for the footer*/
@@ -129,7 +130,7 @@ h2 {
     text-align: center;
     font-size: 22px;
     font-weight: 600;
-    color: #f0f8ff;
+    color: var(--hover-colour);
     height: 100px;
 }
 
@@ -163,8 +164,7 @@ html{
 .backToTopBtn:hover {
     background: linear-gradient(30deg, var(--hover-colour) , var(--scrollbar-yellow));
     color: var(--webpage-bg);
-    opacity: 1;
-    
+    opacity: 1;  
 }
 
 /*Changing the scrollbar colors. Had to google this one*/
@@ -180,10 +180,6 @@ html{
     background: linear-gradient(-45deg, #809bf7, #fceea7);
     border-radius: 6px;
     animation: gradient 5s ease infinite;
-}
-
-::-webkit-scrollbar:hover {
-    background: linear-gradient(#fceea7, #fff7c1);
 }
 
 /*Setting up mobile responsiveness...IDK IF THIS WILL WORK*/
