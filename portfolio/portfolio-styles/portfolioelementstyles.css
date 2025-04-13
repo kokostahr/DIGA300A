@@ -1,0 +1,62 @@
+:root{
+    --nav-bg: #3f1754;
+    --nav-link: #809bf7;
+    --hover-colour: #f0f8ff;
+    --webpage-bg: #160649;
+    --heading-colour: #aeeaff;
+    --text-colour: #9dd7f7;
+    --footer: rgba(170, 140, 245, 0.3); 
+    --bg-overlay:  rgba(22,6,73,0.6);
+    --hover-yellow: #fceea7;
+    --intro-overlay: rgba(170, 140, 245, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-shadow: rgba(255, 2555, 225, 0.1);
+}
+
+.portDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.portDisplay figure::before {
+    content: "🌠 Animation";
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-colour);
+    margin-bottom: 0.5rem;
+}
+
+.portDisplay figure {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 15px var(--card-shadow);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.portDisplay figure:hover {
+    background: linear-gradient(145def, #201e42, #2e1e52);
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.3);
+    animation: sparklez 1.5s infinite alternate;
+}
+
+.portDisplay figcaption {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+@keyframes sparklez {
+    0% {box-shadow: 0 0 5px var(--hover-colour);}
+    100% { box-shadow: 0 0 15px var(--text-colour);}
+}

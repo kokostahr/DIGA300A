@@ -38,6 +38,15 @@
     color: var(--nav-link);
 }
 
+/*SOMETHING AS A MOCK CAROSUL*/
+.fakeCaro {
+    display: flex;
+
+    flex-wrap: nowrap;
+    overflow-x: 0 auto;
+}
+
+
 .links {
     display: flex;
     gap: 10px;
