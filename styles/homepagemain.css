@@ -23,7 +23,13 @@
 .tester a {
     text-decoration: none;
     font-family: "Patrick Hand", cursive;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 600;
     line-height: 1.5;
     color: var(--nav-link);
+}
+
+.links {
+    display: flex;
+    gap: 10px;
 }

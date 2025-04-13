@@ -133,6 +133,40 @@ h2 {
     height: 100px;
 }
 
+/* back to top button things*/
+html{
+    scroll-behavior: smooth;
+}
+
+/* Stylising the back to top button*/
+.backToTopBtn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 100;
+
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--nav-link);
+    background: var(--intro-overlay);
+    border: 2px solid var(--hover-colour);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-decoration : none;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.backToTopBtn:hover {
+    background: linear-gradient(30deg, var(--hover-colour) , var(--scrollbar-yellow));
+    color: var(--webpage-bg);
+    opacity: 1;
+    
+}
+
 /*Changing the scrollbar colors. Had to google this one*/
 ::-webkit-scrollbar {
     width: 10px;
