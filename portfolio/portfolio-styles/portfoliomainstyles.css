@@ -11,7 +11,6 @@
     --intro-overlay: rgba(170, 140, 245, 0.1);
 }
 
-/*page box shadow*/
 .h-entry {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin: 2rem;
@@ -20,6 +19,7 @@
 
 /*placing the top of the blog posts inside a nice box?*/
 .introContainer {
+    font-size: 22px;
     color: var(--text-colour);
     background: var(--intro-overlay);
     border: solid;
@@ -27,21 +27,26 @@
     border-radius: 5px;
     border-color: var(--hover-colour);
     margin: 2rem;
-    padding: 1rem;
+    padding: 1rem; 
 }
 
-.h-entry .p-summary {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  color: var(--heading-colour) ; 
+.introContainer a{
+    text-decoration: none;
+    color: var(--nav-link);
 }
 
-.starSpic {
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: flex-start;
+.introContainer a:hover {
+    color: var(--hover-colour);
+}
+
+.p-summary {
+    font-size: 18px;
+    font-weight: 500;
     font-style: italic;
+}
+
+.p-summary a:hover {
+    color: var(--hover-yellow);
 }
 
 h3 {
