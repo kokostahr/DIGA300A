@@ -31,15 +31,6 @@
     color: var(--text-colour);
 }
 
-.p-author h-card a {
-    color: var(--nav-link);
-    transition: color 0.5 ease;
-}
-
-.p-author h-card a:hover {
-    color: var(--scrollbar-yellow);
-}
-
 .h-entry {
     font-family: "Quicksand", sans-serif;
     font-size: 18px;
@@ -51,12 +42,12 @@
 
 .h-entry a {
     color: var(--nav-link);
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
 }
 
 .h-entry a:hover {
-    color: var(--hover-colour);
+    color: var(--hover-yellow);
 }
 
 .h-entry time {
