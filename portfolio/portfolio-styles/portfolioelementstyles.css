@@ -81,7 +81,20 @@
 .portDisplay figcaption {
     font-size: 0.95rem;
     font-style: italic;
-    margin-top: 0.5rem;
+}
+
+.portDisplay a {
+    background: var(--intro-overlay);
+    border: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: var(--hover-colour);
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.portDisplay a:hover {
+    color: var(--hover-yellow);
 }
 
 @keyframes sparklez {
