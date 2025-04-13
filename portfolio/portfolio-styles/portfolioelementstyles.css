@@ -17,15 +17,43 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 0.5rem;
     max-width: 1200px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
-.portDisplay figure::before {
+/*Adding a heading ontop of each art card*/
+.animation figure::before {
     content: "🌠 Animation";
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-colour);
+    margin-bottom: 0.5rem;
+}
+
+.characters figure::before {
+    content: "🌠 3D Characters";
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-colour);
+    margin-bottom: 0.5rem;
+}
+
+.props figure::before {
+    content: "🌠 3D Props";
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-colour);
+    margin-bottom: 0.5rem;
+}
+
+.gameplay figure::before {
+    content: "🌠 Gameplay";
     display: block;
     font-size: 0.75rem;
     font-weight: 600;
