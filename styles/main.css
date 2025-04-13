@@ -12,9 +12,23 @@
 }
 
 
+
+.navbar {
+    background: #3f1754;
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: #f0f8ff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .sitenamelogo {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
 }
 
 /*this is how I want the name of the website to be called*/
@@ -29,48 +43,22 @@
 
 /* this is the logo for my website*/
 .logo{
-    display: flex;
     width: 100px;
     height: auto;
-    align-items: left;
-}
-
-.navbar {
-    /*background: linear-gradient(to bottom, #3f1754, #663b85);*/
-    background: #3f1754;
-    font-family: "Patrick Hand", cursive;
-    font-size: 22px;
-    font-weight: 600;
-    color: #f0f8ff;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 /*Setting up the flexbox for the navbar...let's see if this works*/
 .navlinks {
    display: flex; 
+   align-items: center;
    gap: 20px;
-   justify-content: center;
    list-style: none;
-   padding: 0;
    margin: 0;
+   padding: 0;
 }
-
-/* Targeting the UL elements of the navbar*/
-.navlinks ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
 
 /* Removing the list of the unordered list (ul)*/
-.navlinks ul li {
+.navlinks li {
     list-style: none;
 }
 
@@ -81,19 +69,15 @@
     text-decoration: none;
     color:#809bf7;   
     padding: 1rem;
-    border-radius: 6;
+    border-radius: 6px;
 }
-
-/* IDK what this is for yet*/
-/*.navbar .navlinks ul li {
-    padding: 10px;
-    margin: 0 10px;
-}*/
 
 /*Adding a hover effect to the buttons of the navbar*/
 .navlinks a:hover {
    /* background-color: linear-gradient(to-right, #f0f8ff, #f1cbfe);*/
     color: #fceea7;
+    animation: slideInRight 2s ease forwards;
+    opacity: 0;
 }
 
 main {
@@ -159,9 +143,9 @@ h2 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#809bf7, #fceea7);
+    background: linear-gradient(-45deg, #809bf7, #fceea7);
     border-radius: 6px;
-    animation: gradient 15s ease infinite;
+    animation: gradient 5s ease infinite;
 }
 
 ::-webkit-scrollbar:hover {
@@ -187,5 +171,29 @@ h2 {
   
     .tester {
       font-size: 18px;
+    }
+  }
+
+  /* Animation for the nav linksssssssssss*/
+  @keyframes slideInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }

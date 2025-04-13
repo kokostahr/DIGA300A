@@ -44,6 +44,9 @@
     font-family: "Quicksand", sans-serif;
     font-size: 18px;
     color: var(--text-colour);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    padding: 1rem;
 }
 
 .h-entry a {
