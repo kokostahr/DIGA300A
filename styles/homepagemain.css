@@ -12,6 +12,15 @@
     --scrollbar-yellow: #fceea7;
 }
 
+.indexContainer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    padding: 1rem;
+}
+
 .tester {
     font-family: "Quicksand", sans-serif;
     font-size: 18px;

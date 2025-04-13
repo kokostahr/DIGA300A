@@ -10,9 +10,19 @@
     --hover-yellow: #fceea7;
 }
 
-h2 {
-    text-align: center;
+/*placing the top of the blog posts inside a nice box?*/
+.introContainer {
+    color: var(--text-colour);
+    background: var(--intro-overlay);
+    border: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: var(--hover-colour);
+    margin: 2rem;
+    padding: 1rem;
 }
+
+.introContainer a
 
 h3 {
     font-family: "Quicksand", sans-serif;
@@ -27,9 +37,8 @@ section {
     font-size: 18px;
     line-height: 1.5;
     color: var(--text-colour);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 2rem;
-    padding: 1rem;
+    margin: 1.3rem;
+    padding: 0.7rem;
 }
 
 section ul {
