@@ -144,8 +144,7 @@ html{
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
-    z-index: 100;
-
+    z-index: 9999;
     padding: 0.4rem 0.8rem;
     font-size: 0.95rem;
     font-weight: 600;
@@ -162,8 +161,9 @@ html{
 }
 
 .backToTopBtn:hover {
-    background: linear-gradient(30deg, var(--hover-colour) , var(--scrollbar-yellow));
+    background: linear-gradient(30deg, var(--hover-colour) , var(--hover-yellow));
     color: var(--webpage-bg);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     opacity: 1;  
 }
 
@@ -179,7 +179,6 @@ html{
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(-45deg, #809bf7, #fceea7);
     border-radius: 6px;
-    animation: gradient 5s ease infinite;
 }
 
 /*Setting up mobile responsiveness...IDK IF THIS WILL WORK*/
@@ -213,17 +212,5 @@ html{
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
     }
   }
