@@ -182,26 +182,263 @@ html{
 }
 
 /*Setting up mobile responsiveness...IDK IF THIS WILL WORK*/
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1366px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-size: cover;
+        background-position: top;
+        padding: 0 10px;
+        overflow-x: hidden;
+    }
+
+    main {
+        background-size: cover;
+        background-position: top;
+        padding: 0px;
+        margin: 0px auto;
+    }
+
     .navbar, .navlinks {
       flex-direction: column;
       align-items: center;
+      gap: 10px;
     }
   
     .site-title {
       text-align: center;
-      font-size: 28px;
+      font-size: 24px;
     }
-  
-    body {
-      background-size: cover;
-      background-position: top;
+
+    .h-entry, .introContainer, .indexContainer {
+        flex-direction: column;
+        align-items: center!important;
+        margin: 0px;
+        padding: 5rem;
+        gap: 1rem;
+        font-size: 16px;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .introContainer{
+        align-items: center!important;
+        margin: 10px;
+        padding: 15rem;
+        gap: 1rem;
+    }
+
+    .introContainer figure {
+        scale: 80%;
+        width: 70%;
+        height: auto;
     }
   
     .tester {
-      font-size: 18px;
+      font-size: 16px;
     }
+
+    .links {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .links a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .fakeCaro {
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .fakeCaro .work-card {
+        width: 40% ;
+        min-height: 70%;
+      }
+    
+      .fakeCaro a {
+        display: block;
+        width: fit-content;
+        margin: 0.5rem auto;
+      }
+
+      .u-photo {
+        scale: 90%;
+      }
+
+      /*for the images and paragraphs*/
+      .pictextContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
+        gap: 1rem;
+      }
+
+      .pictextContainer img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .pictextContainer p {
+        font-size: large;
+        padding: 0 0.1rem;
+    }
+
+      /*for the button too*/
+      .backToTopBtn {
+        scale: 70%;
+      }
+
+      /* Portfolio responsiveness. WHY WONNNT IT WORKOUUUT T^T IM SO TIRED*/
+    .portDisplay {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .portDisplay figure {
+        justify-content: center;
+        width: 100%;
+        transform: scale(1);
+    }
+
+    .portDisplay video {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .portDisplay iframe {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .portDisplay figure:hover {
+        transform: scale(0); 
+    }
+
+    .portDisplay figcaption {
+        font-size: 0.85rem;
+    }
+
+    .portDisplay a {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+        margin: 0.5rem;
+    }
+
+    .animation figure::before,
+    .characters figure::before,
+    .props figure::before,
+    .gameplay figure::before {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    video {
+        scale: 80%;
+    }
+
+    /*reference*/
+    .refe {
+        font-size: 50%; 
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .refe ul {
+        padding-left: 1.2rem;
+    }
+
+    .refe a {
+        font-style: normal; 
+    }
+
+    /*Bottom Navigation Responsivensss */
+    .bot-navi {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        scale: 80%;
+    }
+
+    .bot-navi li {
+        width: 90%;
+        font-size: 1rem;
+      }
+    
+      .bot-navi li a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        width: auto;
+        border: 2px solid var(--hover-colour);
+        border-radius: 6px;
+        background: var(--intro-overlay);
+      }
+    
+      .bot-navi li a:hover {
+        color: var(--scrollbar-yellow);
+      }
+
+
+    .linkBtns li{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        scale: 80%;
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .linkBtns li a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        width: auto;
+        border: 2px solid var(--hover-colour);
+        border-radius: 6px;
+        background: var(--intro-overlay);
+    }
+
   }
+
+  @media (max-width: 400px) {
+    .portDisplay figure {
+        width: 95%;
+    }
+
+    .site-title {
+        font-size: 22px;
+    }
+
+    .tester {
+        font-size: 16px;
+    }
+}
 
   /* Animation for the nav linksssssssssss*/
   @keyframes slideInRight {

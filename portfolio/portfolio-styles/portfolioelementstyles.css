@@ -101,3 +101,10 @@
     0% {box-shadow: 0 0 5px var(--hover-colour);}
     100% { box-shadow: 0 0 15px var(--text-colour);}
 }
+
+@media (max-width: 768) {
+    video {
+        scale: 40%;
+    }
+
+}
