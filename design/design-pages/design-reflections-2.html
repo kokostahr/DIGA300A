@@ -72,91 +72,267 @@
 
             <section data-type="thoughts and reflection-and-thoughts">
                 <h3> Reflections for Assignment 2 Submission</h3>
-                <h4></h4>
+                <h4>General Reflection</h4>
                 <p>
-                    
+                    One thing, I felt after finishing my website was… disappointment? Mostly because the new colour scheme made it look…so 
+                    unserious. It still resembled the night sky to a degree… but I don’t understand why it looked so…childish? Perhaps it 
+                    is the font I chose for the site name? I had to come to terms with the fact that my website looks a bit playful, and 
+                    it took a while to do so. I would like to say that my website has its own unique charm, just like me and I am happy 
+                    about that because it reflects the colour palette, sticks close to the wireframing and does give a night-sky aesthetic, 
+                    just like I wanted. 
                 </p>
 
                 <p>
-
+                    I no longer want a fixed navigation bar or a fixed footer. I decorated the scroll bar so people could use it. This 
+                    made me realise that I would need to add a ‘back to top’ button on the lengthy webpages. For now, I have formatted it 
+                    with HTML. Truthfully, I did not know how to make a ‘scroll to top’ button until I found it in the comments section 
+                    of this <a class="u-url" href="https://youtu.be/QwE_M2P3CRk?si=Fr722PaS9iVwmsPE "> video </a>. 
+                    Very insane, considering I was googling things like “how to make a scroll to top using HTML only.” Then only got 
+                    results that included Html, CSS and JAVASCRIPT! I am so thankful that I came across the comment. 
                 </p>
                 <div class="pictextContainer">
                     <figure>
-                        <img class="u-photo" src="" 
-                        alt="Third wireframe design for" width="390" height="270">
-                        <figcaption> </figcaption>
+                        <img class="u-photo" src="../design-images/reflection-screenshots/YoutubeCommentScreenshot.png" 
+                        alt="Screenshot of @tegotypunikos's comment on Youtube, showing how to make a scroll to top button without 
+                        JAVASCRIPT" width="320" height="180">
+                        <figcaption> Screenshot of @tegotypunikos's comment on Youtube, showing how to make a scroll to top button without 
+                            JAVASCRIPT</figcaption>
                     </figure>
 
                     <p>
-
+                        @Tegotypunikos is unironically my knight in shining armour. Saved me an unnecessary headache of implementing JS 
+                        then having to explain why I did it. 
                     </p>
 
                 </div>
 
                 <p>
-
+                    In designing the footer, I made a conscious choice to avoid overcrowding it with redundant information. I didn’t 
+                    see the need to repeat the major webpage links, since the navbar is consistently present across all pages and I’ve 
+                    included a “Back to Top” button on most pages for fast navigation. 
                 </p>
 
                 <p>
+                    As for my contact details, they’re already available on my homepage, in my profile, and I plan to add them to my 
+                    commissions page. So, the thought of adding them to the footer (which is present on every page) felt unnecessary 
+                    and redundant. I wanted the footer to feel clean, slightly comedic (like a nice ending to each webpage) and 
+                    remain aesthetically in sync with the rest of the ‘cleanish, simple’ layout rather than it becoming a dumping 
+                    ground for excess info. 
+                </p>
+            </section>
 
+            <section data-type="thoughts and reflection-and-thoughts">  
+                <h4>Reflections on implementing CSS elements</h4>
+                <p>
+                    Truthfully, at the beginning, this process had me going “WHY is this so hard!? Why is it SO confusing? WHY won’t 
+                    elements apply?!” Only to realise that I was making the process 10 times harder for myself because I kept resorting 
+                    to South African-British English spelling for items such as ‘color’ and ‘center’. I pondered and lost sleep over the 
+                    fact that none of the colour and alignment elements I had included were working, and it turned out to be such a 
+                    simple issue. Spelling. What a disadvantage, but it is something I am conscious of. 
+                </p>
+
+                <p>
+                    I also forgot to link a lot of the stylesheets at the top of each page, or would make changes on say, for example, 
+                    the blogpage stylesheet, then refresh my browser expecting to see the changes within the design section. Really these 
+                    were just simple, innocent mistakes that drove me crazy and made me lose a lot of time. But I’m grateful to have 
+                    experience them, because I am now very conscious of these issues first. 
+                </p>
+
+                <p>
+                    While refining the user interface across multiple pages, I encountered a bug where my “Back to Top” button’s hover b
+                    ackground (a gradient colour) JUST mysteriously vanished whenever I hovered over it, leaving only a border and NO visual 
+                    feedback. Initially, I thought it was a syntax issue within my HTML, but after confirming the CSS worked on other pages, 
+                    I realised the issue seemed to be page-specific.
+                </p>
+
+                <p>
+                    This made me to Google things like "CSS gradient background not showing on hover" and "CSS elements overriding each other".
+                    While, I discovered a detailed explanation of the z-index property from freeCodeCamp’s website, 
+                    <a class="u-url" 
+                    href="https://www.freecodecamp.org/news/z-index-in-css-what-it-is-and-what-it-does/#:~:text=Z%20Index%20(%20z%2Dindex%20),%2C%20or%20position%3Afixed%20."> 
+                    here </a>. Now I know that z-index is a CSS element used to control the stacking order of overlapping elements, and that 
+                    it only works on elements that have a position value set (like relative, absolute, or fixed).
+                </p>
+
+                <p>
+                    In my case, a layout container was unintentionally overlapping the button, blocking the hover effect. The button was 
+                    already using position: fixed, so adding a higher z-index value (I made it 9999 just to be sure 🤣 🤣) ensured that it 
+                    stacked above all other elements. Once applied, the hover gradient reappeared!
+                </p>
+
+                <p>
+                    To be honest, I didn’t even realise that stacking was something to consider, but this tiny, very annoying issue 
+                    reinforced the importance of knowing and understanding how stacking and positioning work and interact in CSS, especially 
+                    when making layered UIs. It also reminded me that seemingly visual bugs often have deeper structural causes and that 
+                    Googling smartly is still one of the best tools in a developer’s toolbox. 
+                </p>
+
+                <p>
+                    Despite all of this, when it came to adding CSS to my website, well once I figured out how to do things, I initially 
+                    went a bit crazy but toned it down…eventually. 
+                </p>
+                
+                <p>
+                    One thing I realised, is that the images within my blog posts are quite small, and it’s hard to read the information. 
+                    So I made it so that when a user hovers over them, the images scale up.
+                </p>
+
+
+            </section>
+
+            <section data-type="thoughts and reflection-and-thoughts">
+                <h4>Reflection on HTML structure</h4>
+
+                <p>
+                    As I worried, I had to end up tweaking the structure of my NAV bar on each page just so I could have the nav bar match 
+                    the wireframe design. I also had to add a figure tag for the logo, next to the site name. My only issue is, if the image 
+                    is a logo, does it still need to be in a figure tag? Just for safety, I included it into it, but did not add a figcaption 
+                    tag. When doing my CSS, I added a lot more microformatting to each page, just for the ease of styling. 
+                </p>
+
+                <p>
+                    In the end, I had to go in and use flexbox a lot of times for all my blog posts and design related posts so that I could 
+                    format them to fit the wireframe. In my wireframe, the images are on the left side of the screen and the writing is just 
+                    beside it, on the right-hand side. I didn’t want to have to repeat this step multiple times. So, for the paragraphs where 
+                    this happens, I made a class called “pictextContainer”. Before I said I wouldn’t use the div tag, mainly because I 
+                    didn’t know what to use it for. But after researching, I found that most use it as a container to store html for the 
+                    ease of CSS and Javascript. That is the main reason why I have used the div tags. 
+                </p>
+
+                <p>
+                    After learning how to use flexboxes, I used them, almost everywhere on my website. Flexboxes hate to see me coming. 
+                    A tutorial that helped me immensely with figuring out this element is this one: 
+                    <a class="u-url" href="https://youtu.be/phWxA89Dy94?si=_aeYcf5K4QyuXNyz"> this one. </a>
+                     
+                </p>
+
+                <p>
+                    I used a flexbox and the overflow-x element to try and make a ‘mock carousel’ on my index homepage. Unfortunately, it
+                     did not work out... because I didn’t populate it enough 🤣🤣, but the format I have set up in the HTML and CSS show 
+                     the kind of idea I meant to implement. (I did implement it…it just doesn’t show because I need to add more things.) 
+                </p>
+
+                <p>
+                    Speaking of the homepage, I decided to keep the cat text emoji…because it feels very characteristic to the ‘playful’ edge 
+                    my website has. Please don’t hate on her. 
                 </p>
             </section>
 
             <section data-type="thoughts and reflection-and-thoughts">
-                <h4></h4>
+                <h4>Reflections on populating my portfolio page:</h4>
                 <p>
+                    My whole website is built around showcasing my portfolio and my skills. 
+                    I managed to figure out how to embed videos into my portfolio, since I do have a YouTube channel. I also took screenrecorded videos of other elements I wanted to showcase in my portfolio. 
 
                 </p>
 
                 <p>
-
+                    Concerning the games I have made, I honestly don’t know how to embed them into the website as ‘playable’ and if it is 
+                    good idea to, because my website is meant to be a portfolio website and not a gaming website. In the end I decided to 
+                    also just take screenrecorded videos of gameplay. 
                 </p>
 
                 <p>
-
+                    It would be easier if I could link the users to another website such as itch.io or make another website where my games 
+                    are playable…but this is something I can start considering towards the end because it doesn’t directly affect the design 
+                    of my website. It does however indirectly affect my website, because it meant to showcase everything that I have done,
+                     and the skills that I want potential clients and employers to see IMMEDIATLEY.
                 </p>
 
                 <p>
+                    I wanted to include some short footage of the animations I have and gameplay of games I have made, so that it wouldn’t 
+                    just be a stagnant image. I wanted a snippet of the video to showcase the feel of each project that I have on display. 
+                </p>
 
+                <p>  
+                    Of course, I didn’t know how to do this so I researched a bit and found a tutorial for adding local videos
+                    <a class="u-url" href="https://youtube.com/shorts/h51jaPt5A5s?si=Nd2uGSJkwxiq1PT9"> here </a>,
+                    and a tutorial for embedding videos from YouTube into the website,
+                    <a class="u-url" href="https://support.google.com/youtube/answer/171780?hl=en"> here </a>.
+                </p>
+
+                <p>
+                    One thing I’d like to note is that my portfolio page currently does not follow the wireframe design I have for it. I 
+                    think it is the only page on my website that does not follow the wireframe design. I haven’t abandoned the wireframe 
+                    design, not at all, but currently I am worried that I may be burying my portfolio items too deeply within my website. 
+                    So far, I have only added a few pieces that I am proud of and plan to get advice regarding sectioning my portfolio page 
+                    and having other pages that focus solely on those sections. It honestly sounds like it may be a bit too much, and I may 
+                    need to look at scaling down the kinds of things that I want to showcase on my website. 
+                </p>
+
+                <p>
+                    Similarly to the images within my blog posts, I set the portfolio items to enlarge when a user hovers over them so they 
+                    can see the items clearly. 
                 </p>
             </section>
 
             <section data-type="thoughts and reflection-and-thoughts">
-                <h4></h4>
+                <h4>Reflection on Responsive Design.</h4>
                 <p>
-
+                    This was probably the most tedious task I had to do, and I regret saving it for last. The tutorial I watched 
+                    <a class="u-url" href="https://youtu.be/ZYV6dYtz4HA?si=Ht2ZGYVKXkDcZF4o "> here </a>, explicitly said how important it 
+                    is for a web developer to know of responsive design before they start building their website. The YouTuber also mentioned 
+                    that its easier to start coding for a mobile device first then moving towards bigger devices like tablets and PCs. 
                 </p>
 
                 <p>
+                    Not so great for me, as I did this LAST! Truth be told after watching a few minutes of the tutorial and getting an idea on 
+                    what I had to do, I just ran with it. I picked out the necessary values for each element simply through trial and error. 
+                    I’d pick one, test it, if it works, then yay! If not, then I returned to my CSS file and tried another value. 
+                </p>
+                <div class="pictextContainer">
+                    <figure>
+                        <img class="u-photo" src="../design-images/reflection-screenshots/screenshot-of-implementing-responsive-design.png" 
+                        alt="screenshot showcasing Star playing around with responsive design" 
+                        width="390" height="230">
+                        <figcaption> screenshot showcasing Star playing around with responsive design </figcaption>
+                    </figure>
 
+                    <p> 
+                        It was quite difficult to scale the glowing cards both in my index homepage and portfolio homepage down. They just 
+                        wouldn’t fit into the box shadow of both webpages, and I was quite stumped. I didn’t know what else to do except 
+                        to keep resizing the margin and padding of both page’s elements. 
+                    </p>
+                </div>
+
+                <p>
+                    While all the other pages managed to scale properly, there is just something wrong with my portfolio and profile pages. 
+                    I am unsure if there is something wrong with the HTML code’s of both pages that kind of ignore the styling that I do in 
+                    the main CSS file, Or if there is something wrong within the CSS of both pages, because even when I attempt to do 
+                    responsive design within their individual stylesheets…. It is completely ignored….I actually have no idea how to fix 
+                    these two pages…especially the profile page. It is completely broken when in mobile view. 
                 </p>
 
                 <p>
-
+                    No matter what I tried for the portfolio, nothing came right, specifically for the intro card 
                 </p>
 
-                <p>
+                
+                <figure>
+                    <img class="u-photo" src="../design-images/reflection-screenshots/brokenResponsiveDesignScreenshot1.png" 
+                    alt="Screenshot showing how the responsive designed didn't work well with the links at the top of the portfolio page" 
+                    width="270" height="400">
+                    <figcaption> Screenshot showing how the responsive designed didn't work well with the links at the top of the 
+                        portfolio page </figcaption>
+                </figure>
 
-                </p>
-            </section>
-
-            <section data-type="thoughts and reflection-and-thoughts">
-                <h4></h4>
-                <p>
-
-                </p>
-
-                <p>
-
+                <p> 
+                    And the links at the bottom:
                 </p>
 
-                <p>
+                <figure>
+                    <img class="u-photo" src="../design-images/reflection-screenshots/brokenResponsiveDesignScreenshot2.png" 
+                    alt="Screenshot showing how the responsive designed didn't work well with the links 
+                    at the bottom of the portfolio page" width="230" height="230">
+                    <figcaption> Screenshot showing how the responsive designed didn't work well with the links at the bottom of the 
+                        portfolio page</figcaption>
+                </figure>
 
-                </p>
+                    <p> 
+                        I have no words. 🫤
+                    </p>
 
-                <p>
-
-                </p>
+                
             </section>
 
           <!--Keeping this here for easy use
@@ -172,6 +348,25 @@
                     </p>
 
                 </div>
+
+                <section data-type="thoughts and reflection-and-thoughts">
+                    <h4></h4>
+                    <p>
+
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                    <p>
+
+                    </p>
+                </section>
           -->
         </article>
 
@@ -181,52 +376,51 @@
             <ul>
                 <li class="h-cite">
                     <cite>
-                        <a href=""></a>
+                        FreeCodeCamp, 2022. Z Index in CSS: What It Is and What It Does. [online] freeCodeCamp.<a class="u-url" 
+                        href="https://www.freecodecamp.org/news/z-index-in-css-what-it-is-and-what-it-does/"> Available here </a>
+                        (Accessed 14 Apr. 2025)
                     </cite>
                 </li>
     
                 <li class="h-cite">
                     <cite>
-                        <a href=""></a>
+                        Google Support, n.d. Use captions on YouTube. [online] Google Support. 
+                        <a class="u-url" href="https://support.google.com/youtube/answer/171780?hl=en  ">Available here </a> 
+                        (Accessed 14 Apr. 2025).
                     </cite>                   
                 </li>
     
                 <li class="h-cite">
                     <cite>
-                        <a href=""></a>
-                    </cite>         
-                </li>
-    
-                <li class="h-cite">
-                    <cite>
-                        <a href=""></a>
+                        SuperSimpleDev, 2021. HTML & CSS Full Course - Beginner to Pro. [video] YouTube.          
+                        <a class="u-url" href="https://youtu.be/phWxA89Dy94?si=_aeYcf5K4QyuXNyz ">Available here.</a> 
+                        (Accessed 14 Apr. 2025).
                     </cite>     
                 </li>
     
                 <li class="h-cite">
                     <cite>
-                        <a href=""></a>
+                        Web Dev Simplified, 2021. CSS Grid VS Flexbox - When To Use Which. [video] YouTube. 
+                        <a class="u-url" href="https://youtu.be/QwE_M2P3CRk?si=Fr722PaS9iVwmsPE">Available here.</a>
+                        (Accessed 14 Apr. 2025).
                     </cite>
                 </li>
     
                 <li class="h-cite">
                     <cite>
-                        <a href=""></a>
+                        YouTube Shorts, n.d. Responsive CSS Trick. [video] YouTube.  
+                        <a class="u-url" href="https://youtube.com/shorts/h51jaPt5A5s?si=Nd2uGSJkwxiq1PT9">Available here.</a> 
+                        (Accessed 14 Apr. 2025).
                     </cite>
                 </li>
-    
+
                 <li class="h-cite">
                     <cite>
-                        <a href=""></a>
+                        Kevin Powell, 2022. Make Your Websites Responsive Using Only CSS. [video] YouTube.  
+                        <a class="u-url" href="https://youtu.be/ZYV6dYtz4HA?si=Ht2ZGYVKXkDcZF4o ">Available here.</a> 
+                        (Accessed 14 Apr. 2025).
                     </cite>
                 </li>
-    
-                <li class="h-cite">
-                    <cite>
-                        <a href=""></a>
-                    </cite> 
-                </li>
-    
             </ul> 
         </section>
 

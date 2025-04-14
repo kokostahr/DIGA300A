@@ -139,6 +139,10 @@ html{
     scroll-behavior: smooth;
 }
 
+figcaption {
+    font-style: italic;
+}
+
 /* Stylising the back to top button*/
 .backToTopBtn {
     position: fixed;
