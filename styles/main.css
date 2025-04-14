@@ -12,15 +12,13 @@
     --intro-overlay: rgba(170, 140, 245, 0.1);
 }
 
-
-
 .navbar {
     background: var(--nav-bg);
     font-family: "Patrick Hand", cursive;
     font-size: 22px;
     font-weight: 600;
     color: var(--hover-colour);
-    padding: 10px 40px;
+    padding: clamp(0.62rem, 1vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +32,7 @@
 
 /*this is how I want the name of the website to be called*/
 .site-title {
-    font-size: 36px;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
     font-family: "Indie Flower", cursive;
     text-align: left;
     color:var(--nav-link);
@@ -44,7 +42,7 @@
 
 /* this is the logo for my website*/
 .logo{
-    width: 100px;
+    width: clamp(3.5rem, 8vw, 6.25rem);
     height: auto;
 }
 
@@ -52,7 +50,7 @@
 .navlinks {
    display: flex; 
    align-items: center;
-   gap: 20px;
+   gap: clamp(0.75rem, 2vw, 1.25rem);
    list-style: none;
    margin: 0;
    padding: 0;
@@ -65,11 +63,11 @@
 
 .navlinks a{
     font-family: "Patrick Hand", cursive;
-    font-size: 22px;
+    font-size: clamp(0.875rem, 2vw, 1.375rem);
     font-weight: 600;
     text-decoration: none;
     color:var(--nav-link);   
-    padding: 1rem;
+    padding: clamp(0.5rem, 1vw, 1rem);
     border-radius: 6px;
 }
 
@@ -185,8 +183,8 @@ figcaption {
     border-radius: 6px;
 }
 
-/*Setting up mobile responsiveness...IDK IF THIS WILL WORK*/
-@media (max-width: 768px) and (max-width: 1366px) {
+/*Setting up mobile responsiveness...IDK IF THIS WILL WORK. and (max-width: 1440px) */
+@media screen and (min-width:360px) and (max-width: 600px) {
 
     * {
         box-sizing: border-box;
@@ -211,10 +209,19 @@ figcaption {
       align-items: center;
       gap: 10px;
     }
+
+    .navlinks a {
+        font-size: clamp(0.8rem, 3vw, 1rem); 
+        padding: clamp(0.3rem, 2vw, 0.7rem);
+    }
   
     .site-title {
       text-align: center;
-      font-size: 24px;
+      font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .logo {
+        width: clamp(3rem, 7vw, 5rem);
     }
 
     .h-entry, .introContainer, .indexContainer {
@@ -261,15 +268,19 @@ figcaption {
 
     .fakeCaro {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         padding: 3rem;
         gap: 1rem;
         flex-wrap: wrap;
+        scale: 100%;
     }
 
     .fakeCaro .work-card {
+        flex-direction: column;
+        align-items: center;
         width: 40% ;
-        min-height: 70%;
+        min-height: 50%;
       }
     
       .fakeCaro a {
@@ -348,6 +359,10 @@ figcaption {
         padding: 0.4rem;
         font-size: 0.85rem;
         margin: 0.5rem;
+    }
+
+    .tester {
+        font-size: 16px;
     }
 
     .animation figure::before,
@@ -434,19 +449,386 @@ figcaption {
 
   }
 
-  @media (max-width: 400px) {
-    .portDisplay figure {
-        width: 95%;
+  /*tablet responsiveness*/
+  @media screen and (min-width:600px) and (max-width: 1024px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-size: cover;
+    background-position: top;
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+
+  main {
+    background-size: cover;
+    background-position: top;
+    padding: 0px;
+    margin: 0px auto;
+  }
+
+  .navbar, .navlinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    }
+
+    .navlinks a {
+        font-size: clamp(0.9rem, 2.5vw, 1.25rem); /* ~14.4px - 20px */
+        padding: clamp(0.5rem, 1.5vw, 1rem);
     }
 
     .site-title {
-        font-size: 22px;
+        text-align: center;
+        font-size:  clamp(1.75rem, 5vw, 2.25rem);
+    }
+
+    .logo {
+        width: clamp(3.5rem, 7vw, 6rem);
+    }
+
+    .h-entry, .introContainer, .indexContainer {
+        flex-direction: column;
+        align-items: center!important;
+        margin: 0px;
+        padding: 5rem;
+        gap: 1rem;
+        font-size: 16px;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .introContainer {
+        align-items: center!important;
+        margin: 10px;
+        padding: 15rem;
+        gap: 1rem;
+    }
+
+    .introContainer figure {
+        scale: 80%;
+        width: 70%;
+        height: auto;
+    }
+
+    .u-photo:hover {
+        transform: scale(0);
     }
 
     .tester {
         font-size: 16px;
     }
-}
+
+    .links {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .links a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .fakeCaro {
+        flex-direction: row;
+        align-items: center;
+        padding: 3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        scale: 90%;
+    }
+
+    .fakeCaro .work-card {
+        width: 40%;
+        min-height: 70%;
+    }
+
+    .fakeCaro a {
+        display: block;
+        width: fit-content;
+        margin: 0.5rem auto;
+    }
+
+    .u-photo {
+        scale: 90%;
+    }
+
+    .pictextContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .pictextContainer img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .pictextContainer p {
+        font-size: large;
+        padding: 0 0.1rem;
+    }
+
+    .backToTopBtn {
+        scale: 70%;
+    }
+
+    .portDisplay {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .portDisplay figure {
+        justify-content: center;
+        width: 100%;
+        transform: scale(1);
+    }
+
+    .portDisplay video, .portDisplay iframe {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .portDisplay figure:hover {
+        transform: scale(0); 
+    }
+
+    .portDisplay figcaption, .portDisplay a {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+        margin: 0.5rem;
+    }
+
+    .animation figure::before, .characters figure::before,
+    .props figure::before, .gameplay figure::before {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    video {
+        scale: 80%;
+    }
+
+    .refe {
+        font-size: 50%; 
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .refe ul {
+        padding-left: 1.2rem;
+    }
+
+    .refe a {
+        font-style: normal; 
+    }
+
+    .bot-navi {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        scale: 80%;
+    }
+
+    .bot-navi li {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .bot-navi li a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        width: auto;
+        border: 2px solid var(--hover-colour);
+        border-radius: 6px;
+        background: var(--intro-overlay);
+    }
+
+    .bot-navi li a:hover {
+        color: var(--scrollbar-yellow);
+    }
+
+    .linkBtns li {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        scale: 80%;
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .linkBtns li a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        width: auto;
+        border: 2px solid var(--hover-colour);
+        border-radius: 6px;
+        background: var(--intro-overlay);
+    }
+  }
+
+  /* T^T for computer responsiveness.. this is so tufffie, why won't the elements scale properly*/
+  @media screen and (min-width:1024px) and (max-width:1440px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 0 5vw;
+        background-position: center;
+        overflow-x: hidden;
+    }
+
+    main {
+        padding: 2rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navbar, .navlinks {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navlinks a {
+        font-size: clamp(1rem, 2vw, 1.375rem); /* ~16px - 22px */
+        padding: clamp(0.75rem, 1vw, 1.25rem);
+    }
+
+    .site-title {
+        font-size: clamp(2rem, 3vw, 2.5rem);
+    }
+
+    .logo {
+        width: clamp(4rem, 6vw, 6.25rem);
+    }
+
+    .h-entry, .introContainer, .indexContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        text-align: left;
+        padding: 4rem;
+        font-size: 18px;
+    }
+
+    .introContainer {
+        padding: 6rem;
+    }
+
+    .introContainer figure {
+        scale: 90%;
+        width: 60%;
+    }
+
+    .u-photo {
+        scale: 100%;
+    }
+
+    .u-photo:hover {
+        transform: scale(1.1);
+    }
+
+    .tester {
+        font-size: 18px;
+    }
+
+    .links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .links a {
+        width: auto;
+    }
+
+    .fakeCaro {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem;
+        gap: 2rem;
+    }
+
+    .fakeCaro .work-card {
+        width: 30%;
+    }
+
+    .pictextContainer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+
+    .pictextContainer img {
+        max-width: 350px;
+    }
+
+    .portDisplay {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .portDisplay video, .portDisplay iframe {
+        max-width: 400px;
+    }
+
+    .portDisplay figure:hover {
+        transform: scale(1.05);
+    }
+
+    .portDisplay figcaption, .portDisplay a {
+        font-size: 1rem;
+    }
+
+    video {
+        scale: 90%;
+    }
+
+    .refe {
+        font-size: 0.9rem;
+    }
+
+    .bot-navi, .linkBtns li {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    .bot-navi li, .linkBtns li {
+        width: auto;
+    }
+
+    .bot-navi li a, .linkBtns li a {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+  }
 
   /* Animation for the nav linksssssssssss*/
   @keyframes slideInRight {
