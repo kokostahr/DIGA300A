@@ -236,6 +236,10 @@ html{
         width: 70%;
         height: auto;
     }
+    
+    .u-photo:hover{
+        transform: scale(0);
+    }
   
     .tester {
       font-size: 16px;

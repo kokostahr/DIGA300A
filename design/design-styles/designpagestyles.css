@@ -80,6 +80,18 @@
     align-items: center;
 }
 
+.u-photo {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 4px;
+    border-color: var(--hover-colour);
+    transition: transform 0.3s ease;
+}
+
+.u-photo:hover {
+    transform: scale(1.5);
+}
+
 /*something for the reference list. add a box around the whole thing*/
 .refe {
     font-family: "Quicksand", sans-serif;
