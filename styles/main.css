@@ -279,8 +279,9 @@ figcaption {
     .fakeCaro .work-card {
         flex-direction: column;
         align-items: center;
-        width: 40% ;
+        width: 100% ;
         min-height: 50%;
+        height: auto;
       }
     
       .fakeCaro a {
@@ -290,6 +291,7 @@ figcaption {
       }
 
       .u-photo {
+        width: 100%;
         scale: 90%;
       }
 
