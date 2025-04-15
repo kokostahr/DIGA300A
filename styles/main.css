@@ -1,4 +1,4 @@
-/* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH!*/
+/* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH! */
 :root{
     --nav-bg: #3f1754;
     --nav-link: #809bf7;
@@ -18,6 +18,8 @@
     font-size: 22px;
     font-weight: 600;
     color: var(--hover-colour);
+    /*Chose to later clamp the valuables as  thought it would help. (A classmate suggested doing so.) IT ALSO DIDN'T WORK for my responsive 
+    design.*/
     padding: clamp(0.62rem, 1vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem);
     display: flex;
     justify-content: space-between;
@@ -183,7 +185,9 @@ figcaption {
     border-radius: 6px;
 }
 
-/*Setting up mobile responsiveness...IDK IF THIS WILL WORK. and (max-width: 1440px) */
+/*Setting up mobile responsiveness...IDK IF THIS WILL WORK. It didn't end up working. Most of this code, particularly 
+relating to media queries and the responsive design has solutions from ChatGpt, which also  did not end up working.
+My responsive design does not flow smoothly or scale properly. */
 @media screen and (min-width:360px) and (max-width: 600px) {
 
     * {
