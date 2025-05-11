@@ -21,7 +21,7 @@
     /*Chose to later clamp the valuables as  thought it would help. (A classmate suggested doing so.) IT ALSO DIDN'T WORK for my responsive 
     design.*/
     padding: clamp(0.62rem, 1vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem);
-    width: 100%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
