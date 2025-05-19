@@ -78,7 +78,7 @@
 .navlinks a:hover {
    /* background-color: linear-gradient(to-right, #f0f8ff, #f1cbfe);*/
     color: var(--hover-yellow);
-    animation: slideInRight 2s ease forwards;
+    animation: slideInRight 2s ease backwards;
     opacity: 0;
 }
 
@@ -129,19 +129,20 @@ h2 {
    /* background: #6b8cf5;*/
     font-family: "Patrick Hand", cursive;
     text-align: center;
+    justify-content: center;
     font-size: 22px;
     font-weight: 600;
     color: var(--hover-colour);
     height: 100px;
 }
 
+figcaption {
+    font-style: italic;
+}
+
 /* back to top button things*/
 html{
     scroll-behavior: smooth;
-}
-
-figcaption {
-    font-style: italic;
 }
 
 /* Stylising the back to top button*/
@@ -151,7 +152,8 @@ figcaption {
     right: 1.5rem;
     z-index: 9999;
     padding: 0.4rem 0.8rem;
-    font-size: 0.95rem;
+    font-family: "Patrick Hand", cursive;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--nav-link);
     background: var(--intro-overlay);
@@ -159,17 +161,22 @@ figcaption {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-decoration : none;
-    cursor: pointer;
-    opacity: 0.85;
+    opacity: 0.01;
+    pointer-events: none;
     transition: all 0.3s ease-in-out;
 
 }
 
-.backToTopBtn:hover {
+.backToTopBtn.active{
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.backToTopBtn.active:hover {
     background: linear-gradient(30deg, var(--hover-colour) , var(--hover-yellow));
     color: var(--webpage-bg);
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    opacity: 1;  
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);      
 }
 
 /*Changing the scrollbar colors. Had to google this one*/
@@ -841,7 +848,7 @@ My responsive design does not flow smoothly or scale properly. */
   @keyframes slideInRight {
     0%{
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(300px);
     }
     100% {
         opacity: 1;
