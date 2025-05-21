@@ -1,6 +1,6 @@
 /* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH! */
 :root{
-    --nav-bg: #3f1754;
+    --nav-bg: rgba(63, 23, 84, 0.1);
     --nav-link: #809bf7;
     --hover-colour: #f0f8ff;
     --webpage-bg: #160649;
@@ -17,11 +17,9 @@
     font-family: "Patrick Hand", cursive;
     font-size: 22px;
     font-weight: 600;
-    color: var(--hover-colour);
     /*Chose to later clamp the valuables as  thought it would help. (A classmate suggested doing so.) IT ALSO DIDN'T WORK for my responsive 
     design.*/
-    padding: clamp(0.62rem, 1vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem);
-    
+    padding: clamp(0.62rem, 1vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem);  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,9 +76,17 @@
 .navlinks a:hover {
    /* background-color: linear-gradient(to-right, #f0f8ff, #f1cbfe);*/
     color: var(--hover-yellow);
-    animation: slideInRight 2s ease backwards;
-    opacity: 0;
+    /*animation: slideInRight 2s ease backwards*/
 }
+
+/* Making an active class for the navbar links so that the colour can change when the relevant page is active
+THIS IS A NEW ADDITION FOR JS Purposes*/
+.navlinks a.active {
+    color: var(--hover-colour) !important;
+    pointer-events: none;
+    text-shadow: 0 0 25px var(--hover-colour), 0 0 15px var(--hover-colour);
+}
+
 
 main {
     margin: 10px 0;

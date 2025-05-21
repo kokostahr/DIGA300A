@@ -7,7 +7,6 @@
     <meta name="author" content="Star Nkosi">
     <meta name="description" content="Links to the academic essays that Star writes up are on this homepage site.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/normalise.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="essay-styles/essaymainpage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,51 +14,47 @@
     <link href="
     https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     
+    <!--JAvaScript Linkinh-->
+    <script src="../scripts/main.js"></script>
+    <script src="essay-scripts/essayhomepages.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar"> 
-            <div class="sitenamelogo">
-                <figure> <img class="logo" src="../images/star-logo.png" alt="logo of a star on a fishhook"></figure>
-                <h1 class="site-title">Starfish <br> Galaxy</h1>
-            </div>
-            <ul class="navlinks">
-                <li>
-                    <a href="../index.html">Homepage</a>
-                </li>
-                <li>
-                    <a href="../blogs/blog-home.html"> Blog Homepage</a>
-                </li>
-                <li>
-                    <a href="../profile/profilehomepage.html"> Profile</a>
-                </li>
-                <li>
-                    Essays
-                </li>
-                <li>
-                    <a href="../design/design-homepage.html"> Design </a>
-                </li>
-                <li>
-                    <a href="../portfolio/portfolio-index.html"> Portfolio</a>
-                </li>
-                <li>
-                    <a href="../portfolio/commissions.html"> Commissions</a>
-                </li>
-            </ul>
-        </nav>
+        <nav class="navbar-placeholdar"></nav>
     </header>
 
     <main>
-        <div class="h-entry">
+        <article class="h-entry" data-article-type="essay-blog">
             <div class="introContainer">
-                <h2>Essays</h2>
-                <strong>COMING SOON...</strong>
-                <p> Stay Tuned</p>
+                <h2 class="p-name"> My Essays </h2>
+                <p>
+                    by <a class="p-author h-card" href="../profile/profilehomepage.html"> Star Nkosi </a>
+                </p>
+                <p>
+                    <!--I dont remember the actual date I posted this!!-->
+                    Published: <time class="dt-published" datetime="2025-03-16">16 March 2025</time> <br>
+                    Last updated: <time class="dt-update" datetime="2025-03-17"> 21 May 2025</time>
+                </p>
+                <p class="p-summary">
+                    Welcome to the Essay section! This page displays all the academic essays I had to write for marks... that
+                    is pretty much it. 
+                </p>
             </div>
-
             <!--gOING TO add links to the different essay pages-->
         </div>
-
+    
+            <section class="academic-essays">
+                <ul>
+                    <li>
+                        <a href="essay-pages/essay-one.html"> Essay Wan: UX and UI Analysis</a>
+                    </li>
+                    <!-- <li>
+                        <a href="academic/week-14-blog-post.html"> Week 14: unknown for now</a>
+                    </li>-->
+        
+                </ul>
+            </section>
+        </article>    
     </main>
 
     <footer class="ftr">

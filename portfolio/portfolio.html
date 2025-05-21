@@ -8,7 +8,6 @@
     <meta name="description" content="This is a landing page with links to all the relevant sections of Star's work. It also has a link 
     to her commission page.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/normalise.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="portfolio-styles/portfoliomainstyles.css" />
     <link rel="stylesheet" href="portfolio-styles/portfolioelementstyles.css" />
@@ -16,39 +15,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="
     https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    
+ 
+    <!--JAvaScript Linkinh-->
+    <script src="../scripts/main.js"></script>
+    <script src="portfolio-scripts/portfolio-scripting.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar"> 
-            <div class="sitenamelogo">
-                <figure> <img class="logo" src="../images/star-logo.png" alt="logo of a star on a fishhook"></figure>
-                <h1 class="site-title">Starfish <br> Galaxy</h1>
-            </div>
-            <ul class="navlinks">
-                <li>
-                    <a href="../index.html">Homepage</a>
-                </li>
-                <li>
-                    <a href="../blogs/blog-home.html"> Blog Homepage</a>
-                </li>
-                <li>
-                    <a href="../profile/profilehomepage.html"> Profile</a>
-                </li>
-                <li>
-                    <a href="../essays/essays-homepage.html"> Essays </a>
-                </li>
-                <li>
-                    <a href="../design/design-homepage.html"> Design </a>
-                </li>
-                <li>
-                    Portfolio
-                </li>
-                <li>
-                    <a href="commissions.html"> Commissions</a>
-                </li>
-            </ul>
-        </nav>
+        <nav class="navbar-placeholdar"></nav>
     </header>
 
     <main>
@@ -71,7 +45,7 @@
                 <div class="animation">
                     <div class="portDisplay">
                         <figure>
-                            <iframe width="300" height="200" src="https://www.youtube.com/embed/WutZ8Y0lgq0?si=JWpdrrN42zpdpTBv" 
+                            <iframe width="250" height="100" src="https://www.youtube.com/embed/WutZ8Y0lgq0?si=JWpdrrN42zpdpTBv" 
                             title="YouTube video player" frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -87,7 +61,7 @@
                         </figure>
     
                         <figure>
-                            <video loop autoplay muted src="animations/2d-anims/UnfinishedKissAnim.mp4" width="300" height="200"> </video>
+                            <video class="whatever" loop autoplay muted src="animations/2d-anims/UnfinishedKissAnim.mp4" width="250" height="100"> </video>
                             <figcaption>
                                 Unfinished Practise animation
                             </figcaption>
@@ -99,7 +73,7 @@
                             </p>
                         </figure>
                         <figure>
-                            <video loop autoplay muted src="animations/2d-anims/firstTakeAnimation.mp4" width="300" height="200"></video>
+                            <video loop autoplay muted src="animations/2d-anims/firstTakeAnimation.mp4" width="250" height="100"></video>
                             <figcaption>
                                 Take Animation
                             </figcaption>
@@ -119,7 +93,7 @@
                 <div class="characters">
                     <div class="portDisplay">
                         <figure>
-                            <video loop autoplay muted src="3d-modelling/characters/NewAlien.mp4" width="250" height="190"></video>
+                            <video loop autoplay muted src="3d-modelling/characters/NewAlien.mp4" width="150" height="100"></video>
                             <figcaption>
                                3D Modelled Alien 
                             </figcaption>
@@ -131,7 +105,7 @@
                         </figure>
     
                         <figure>
-                            <video loop autoplay muted src="3d-modelling/characters/GirlCharacter.mp4" width="250" height="190"></video>
+                            <video loop autoplay muted src="3d-modelling/characters/GirlCharacter.mp4" width="150" height="100"></video>
                             <figcaption>
                                 3D Modelled Girl
                             </figcaption>
@@ -144,7 +118,7 @@
                         </figure>
 
                         <figure>
-                            <video loop autoplay muted src="3d-modelling/characters/AlienCharacter.mp4" width="250" height="190"></video>
+                            <video loop autoplay muted src="3d-modelling/characters/AlienCharacter.mp4" width="150" height="100"></video>
                             <figcaption>
                                 Old 3D Modelled Alien
                             </figcaption>
@@ -155,7 +129,7 @@
                         </figure>
     
                         <figure>
-                            <video loop autoplay muted src="3d-modelling/characters/ShootingEnemy.mp4" width="250" height="190"></video>
+                            <video loop autoplay muted src="3d-modelling/characters/ShootingEnemy.mp4" width="150" height="100"></video>
                             <figcaption>
                                 3D Modelled Enemy
                             </figcaption>
@@ -167,6 +141,16 @@
                         </figure>
 
                     </div>
+                </div>
+
+                <div class="lightbox" id="lightboxs">
+                    <span class="close" id="close"> &times;</span>
+                    <span class="prev" id="prev"> &#10094;</span>
+                    <div class="lightbox-content">
+                        <video loop autoplay muted src="" alt="lightbox-video" width="" height=""></video>
+                        <div class="caption" id="caption"></div>
+                    </div>
+                    <span class="next" id="next"> &#10095;</span>
                 </div>
                 
             </section>
@@ -191,14 +175,14 @@
                             <figcaption>
                                 3D Modelled Skull
                             </figcaption>
-                                One of the props featured in the Alien Game assignment, made in 2nd year. 
+                               
                             <p class="summary">
-                                
+                                 One of the props featured in the Alien Game assignment, made in 2nd year.
                             </p>
                         </figure>
 
                         <figure>
-                            <video loop autoplay muted src="3d-modelling/props/SwordKnife.mp4" width="490" height="390"></video>
+                            <video loop autoplay muted src="3d-modelling/props/SwordKnife.mp4" width="180" height="220"></video>
                             <figcaption>
                                 3D Modelled Sword Knife
                             </figcaption>
@@ -209,7 +193,7 @@
                         </figure>
 
                         <figure>
-                            <video loop autoplay muted src="3d-modelling/props/ThrowingKnife.mp4" width="490" height="390"></video>
+                            <video loop autoplay muted src="3d-modelling/props/ThrowingKnife.mp4" width="180" height="220"></video>
                             <figcaption>
                                 3D Modelled Throwing Knife
                             </figcaption>
@@ -229,7 +213,7 @@
                 <div class="gameplay">
                     <div class="portDisplay">
                         <figure>
-                            <video loop autoplay muted src="development/game-dev/dressupGameplay.mp4" width="490" height="390"></video>
+                            <video loop autoplay muted src="development/game-dev/dressupGameplay.mp4" width="250" height="100"></video>
                             <figcaption>
                                Prototype: Dress Up Gameplay
                             </figcaption>
@@ -242,7 +226,7 @@
                         </figure>
     
                         <figure>
-                            <video loop autoplay muted src="development/game-dev/lovemazeGameplay.mp4" width="490" height="390"></video>
+                            <video loop autoplay muted src="development/game-dev/lovemazeGameplay.mp4" width="250" height="100"></video>
                             <figcaption>
                                 Prototype: Two-player Love Maze
                             </figcaption>
@@ -256,7 +240,7 @@
                         </figure>
 
                         <figure>
-                            <video loop autoplay muted src="development/game-dev/alienGameplay.mp4" width="490" height="390"></video>
+                            <video loop autoplay muted src="development/game-dev/alienGameplay.mp4" width="250" height="100"></video>
                             <figcaption>
                                 Alien Game
                             </figcaption>
@@ -296,7 +280,7 @@
 
 
 
-        <a class="backToTopBtn" href="#">Back to top</a>
+        <button class="backToTopBtn" href="#">Back to top</button>
     </main>
 
     <footer class="ftr">

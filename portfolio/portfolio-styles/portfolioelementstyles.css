@@ -9,11 +9,12 @@
     --bg-overlay:  rgba(22,6,73,0.6);
     --hover-yellow: #fceea7;
     --intro-overlay: rgba(170, 140, 245, 0.1);
+    --lightbox-overlay: rgba(22, 6, 73, 0.9);
     --card-bg: rgba(255, 255, 255, 0.05);
     --card-shadow: rgba(255, 2555, 225, 0.1);
 }
 
-.portDisplay {
+/*.portDisplay {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -22,6 +23,16 @@
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 2rem 1rem;
+}*/
+/*Ugh may have to erase my beautiful port display stuff. Will leave it as a comment just incase. 
+*/
+body {
+    overflow-x: hidden;
+}
+.portDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* minmax means that the coloumn will never be smaller than*/
+    gap: 15px;
 }
 
 /*Adding a heading ontop of each art card*/
@@ -32,6 +43,9 @@
     font-weight: 600;
     color: var(--text-colour);
     margin-bottom: 0.5rem;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.2s;
 }
 
 .characters figure::before {
@@ -70,6 +84,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
+ /* Chnaging this for javascript purposes.
+ */
 
 .portDisplay figure:hover {
     background: linear-gradient(145def, #201e42, #2e1e52);
@@ -92,11 +108,91 @@
     border-color: var(--hover-colour);
     margin: 1rem;
     padding: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    max-width: fit-content;
+    overflow-wrap: break-word;
 }
 
 .portDisplay a:hover {
     color: var(--hover-yellow);
 }
+
+/*Adding the lightbox styling for the JavaScript purposes
+*/
+.lightbox {
+    display: none; /* changed to flex dynamically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9003;
+    background:  var(--lightbox-overlay);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Fixing the lightbox content*/
+.lightbox-content {
+    position: relative;
+    text-align: center;
+}
+
+.lightbox-content video, 
+.lightbox-content iframe {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+}
+
+/* Hiding the summary until lightbox opens*/
+.summary {
+    display: none;
+}
+
+/* Showing the summary ONLY inside the lightbox, not in the gallery*/
+.lightbox .caption {
+    display: block;
+    color: var(--text-colour);
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    max-width: 600px;
+}
+
+/*Now styling the navigation buttons */
+.prev, .next, .close {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--hover-yellow);
+    cursor: url("../../images/pointer.png"), pointer;
+    user-select: none;
+    z-index: 9004;
+}
+
+.close {
+    top: 1rem;
+    right: 1rem;
+}
+
+.prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 @keyframes sparklez {
     0% {box-shadow: 0 0 5px var(--hover-colour);}
