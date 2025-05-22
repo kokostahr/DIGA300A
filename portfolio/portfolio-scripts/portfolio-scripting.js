@@ -26,10 +26,18 @@ document.addEventListener("DOMContentLoaded", function (){
     /**This function will, obviously close the lightbox */
     function closeLightbox() {
         lightbox.style.display = "none";
-        //stop the video from playing...
+
+    // Pause only if it's a video, not an iframe
+    if (lightboxVid.tagName.toLowerCase() === "video") {
         lightboxVid.pause();
-        //reset the video source
         lightboxVid.src = "";
+    } else {
+        // Remove iframe for cleanup if using iframe (YouTube)
+        const iframe = lightbox.querySelector("iframe");
+        if (iframe) {
+            iframe.remove(); // Clean up to stop YouTube playback
+        }
+    }
     }
 
     //doing something that will open the lightbox for each gellery item...and set a click event for each figure
@@ -51,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function (){
     console.log("Clicked", vid.src || vid.getAttribute("src"));
     //then calling the closebuttonnn
     closeBtn.addEventListener("click", () => {
-    closeLightbox();
+        if (e.target.id === "close") {
+        console.log("BODY LISTENER: Close clicked");
+        closeLightbox();
+        }
     });
     //Can I add an escape 'esc' to close the lightbox too
     document.addEventListener("keydown", (e) => {
@@ -60,6 +71,38 @@ document.addEventListener("DOMContentLoaded", function (){
         }
     });
 
-    //THEN ADD THE PREVIOUS AND NEXT FUNCTIONALITY 
-    
+    /*
+    //THEN ADD THE PREVIOUS, CLOSE AND NEXT FUNCTIONALITY. Adding a function that will detect which item in the lightbox loop we are in
+    //it doesnt work. sigh
+    function showItem(index) {
+        const totalItems = galleryItems.length;
+        //then wrap it around if te index goes way too far
+        if (index < 0) {
+            index = totalItems -1;
+        } else if (index >= totalItems) {
+            index = 0;
+        }
+
+        currentIndex = index;
+        const figure = galleryItems[currentIndex];
+        const vid = figure.querySelector("video") || figure.querySelector("iframe");
+
+        if(vid) {
+            const vidSrc = vid.getAttribute("src") || vid.src;
+            const caption = figure.querySelector(".summary")?.textContent || "";
+
+            openLightbox(videoSrc, caption);
+        }
+    } 
+    //previous button functionality 
+    prevBtn.addEventListener("click", () => {
+        showItem(currentIndex - 1);
+    });
+    //next button functionality 
+    nextBtn.addEventListener("click", () => {
+        showItem(currentIndex + 1);
+    });
+
+*/
+    //SAVING A SPACE FOR KEYBOARD NAVIGATION
 });
