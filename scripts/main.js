@@ -86,6 +86,11 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     <!--Desktop navigation so it STOPS DISAPPEARING!-->
     <ul class="navlinks desktop-nav">
+    <!--The homepage, when loaded from the direct github link is not recognised as an active page, 
+    therefore making the home button in the nav clickable when the page loads with the 'https://kokostahr.github.io/DIGA300A/' 
+    path from github. but the home page is recognised as active when loaded from the 'https://kokostahr.github.io/DIGA300A/index.html'
+    path that I have set here. I am currently unsure how to set both paths to be recognised the main homepages... but it is something
+    I will fix later, with guidance-->
       <li><a href="${basePagePath}index.html" data-page="index.html">Home</a></li>
       <li><a href="${basePagePath}blogs/blog-home.html" data-page="blog-home.html">Blogz</a></li>
       <li><a href="${basePagePath}profile/profilehomepage.html" data-page="profilehomepage.html">Profile</a></li>

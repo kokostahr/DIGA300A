@@ -10,9 +10,7 @@ document.addEventListener("DOMContentLoaded", function (){
     /*const lightboxVid = document.getElementById("lightbox-video");*/
     const lightboxVid = lightbox.querySelector("video"); //getting the video inside the lightbox
     const captionText = document.getElementById("caption");
-    const closeBtn = document.getElementById("close");
-    const prevBtn = document.getElementById("prev");
-    const nextBtn = document.getElementById("next");
+   
     //then we need a variable that will track which item is open.
     let currentIndex = 0;
 
@@ -31,18 +29,18 @@ document.addEventListener("DOMContentLoaded", function (){
     if (lightboxVid.tagName.toLowerCase() === "video") {
         lightboxVid.pause();
         lightboxVid.src = "";
-    } else {
+    } /*else { //currently the code relating to youtube videos and iframes breaks the lightbox, and stops it from working. Will fix later
         // Remove iframe for cleanup if using iframe (YouTube)
         const iframe = lightbox.querySelector("iframe");
         if (iframe) {
             iframe.remove(); // Clean up to stop YouTube playback
         }
-    }
+    }*/
     }
 
     //doing something that will open the lightbox for each gellery item...and set a click event for each figure
     galleryItems.forEach((figure, index) => {
-    const vid = figure.querySelector("video") || figure.querySelector("iframe");
+    /*const vid = figure.querySelector("video") || figure.querySelector("iframe");
     if (vid) {
         vid.style.cursor = "pointer";
         vid.addEventListener("click", () => {
@@ -54,15 +52,26 @@ document.addEventListener("DOMContentLoaded", function (){
                 openLightbox(videoSrc, caption);
                 console.log("Clicked", videoSrc);
             });
-        }
+        }*/
+
+    //retrying but this time, making it so that the user can click anywhere on the figure, not just the video
+        figure.style.cursor = "pointer";
+        figure.addEventListener("click", () => {
+            currentIndex = index;
+            const vid = figure.querySelector("video") /*|| figure.querySelector("iframe")*/;
+            const src = vid ? (vid.getAttribute("src") || vid.src) : "";
+            const caption = figure.querySelector(".summary")?.textContent || "";
+            openLightbox(src, caption);
+        });
     });
-    console.log("Clicked", vid.src || vid.getAttribute("src"));
+
+    const closeBtn = document.getElementById("close");
+    //WHY WONT THESE BUTTONS WORK!
+    console.log(closeBtn); // should log the element, or null if not found
     //then calling the closebuttonnn
-    closeBtn.addEventListener("click", () => {
-        if (e.target.id === "close") {
-        console.log("BODY LISTENER: Close clicked");
+    closeBtn.addEventListener("click", (e) => {
+        console.log("Close clicked");
         closeLightbox();
-        }
     });
     //Can I add an escape 'esc' to close the lightbox too
     document.addEventListener("keydown", (e) => {
@@ -71,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function (){
         }
     });
 
-    /*
+    
     //THEN ADD THE PREVIOUS, CLOSE AND NEXT FUNCTIONALITY. Adding a function that will detect which item in the lightbox loop we are in
-    //it doesnt work. sigh
+    //it doesnt work. sigh. show the item at the index 
     function showItem(index) {
         const totalItems = galleryItems.length;
         //then wrap it around if te index goes way too far
@@ -91,9 +100,11 @@ document.addEventListener("DOMContentLoaded", function (){
             const vidSrc = vid.getAttribute("src") || vid.src;
             const caption = figure.querySelector(".summary")?.textContent || "";
 
-            openLightbox(videoSrc, caption);
+            openLightbox(vidSrc, caption);
         }
     } 
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
     //previous button functionality 
     prevBtn.addEventListener("click", () => {
         showItem(currentIndex - 1);
@@ -103,6 +114,6 @@ document.addEventListener("DOMContentLoaded", function (){
         showItem(currentIndex + 1);
     });
 
-*/
+
     //SAVING A SPACE FOR KEYBOARD NAVIGATION
 });

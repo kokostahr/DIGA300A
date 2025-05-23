@@ -208,5 +208,111 @@ body {
     video {
         scale: 40%;
     }
-
 }
+
+/*responsiveness in the approriate section*/
+@media screen and (min-width:360px) and (max-width: 600px) {
+    /* Portfolio responsiveness. WHY WONNNT IT WORKOUUUT T^T IM SO TIRED*/
+    .portDisplay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .portDisplay figure {
+        justify-content: center;
+        width: 100%;
+        transform: scale(1);
+    }
+
+    .portDisplay video {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .portDisplay iframe {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .portDisplay figure:hover {
+        transform: scale(0); 
+    }
+
+    .portDisplay figcaption {
+        font-size: 0.85rem;
+    }
+
+    .portDisplay a {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+        margin: 0.5rem;
+    }
+
+    .tester {
+        font-size: 16px;
+    }
+
+    .animation figure::before,
+    .characters figure::before,
+    .props figure::before,
+    .gameplay figure::before {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    video {
+        scale: 80%;
+    }
+}
+
+/*tablet responsiveness*/
+  @media screen and (min-width:600px) and (max-width: 1024px) {
+    .portDisplay {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .portDisplay figure {
+        justify-content: center;
+        width: 100%;
+        transform: scale(1);
+    }
+
+    .portDisplay video, .portDisplay iframe {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .portDisplay figure:hover {
+        transform: scale(0); 
+    }
+
+    .portDisplay figcaption, .portDisplay a {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+        margin: 0.5rem;
+    }
+
+    .animation figure::before, .characters figure::before,
+    .props figure::before, .gameplay figure::before {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    video {
+        scale: 80%;
+    }
+  }

@@ -1,6 +1,7 @@
 /* Adding a root so that I can easily call the colours in each webpage. IDK HOW TO MAKE THEM WORK THOUGH! */
 :root{
-    --nav-bg: rgba(63, 23, 84, 0.1);
+    --nav-bg: #3f1754;
+    --nav-overlay-bg: rgba(63, 23, 84, 0.9);
     --nav-link: #809bf7;
     --hover-colour: #f0f8ff;
     --webpage-bg: #160649;
@@ -100,7 +101,7 @@ THIS IS A NEW ADDITION FOR JS Purposes*/
     width: 25px;
     height: 3px;
     background: var(--nav-link);
-    border-radius: 2px;
+    border-radius: 3.5px;
 }
 
 /*hiding the mobile navigation*/
@@ -110,17 +111,22 @@ THIS IS A NEW ADDITION FOR JS Purposes*/
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-overlay);
+    background: var(--nav-overlay-bg);
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 /*then show the overlay when active*/
 .nav-overlay.active {
-  display: flex;
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
 }
 
 /*the close buttttotoon for hamburgar.*/
@@ -128,7 +134,7 @@ THIS IS A NEW ADDITION FOR JS Purposes*/
     position: absolute;
     top: 20px;
     right: 30px;
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: var(--hover-yellow);
     background: none;
     border: none;
@@ -248,7 +254,7 @@ html{
 
 
 /*ensuring the hamburger only shows up on smaller screens*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1023px) {
     .hamburger {
     display: flex;
    /* flex-direction: column;
@@ -265,7 +271,7 @@ html{
 }
 
 /* hidening hamburger on larger screens */
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1024px) {
   .hamburger {
     display: none;
   }
@@ -411,65 +417,7 @@ My responsive design does not flow smoothly or scale properly. */
         scale: 70%;
       }
 
-      /* Portfolio responsiveness. WHY WONNNT IT WORKOUUUT T^T IM SO TIRED*/
-    .portDisplay {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.3rem;
-        gap: 1rem;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .portDisplay figure {
-        justify-content: center;
-        width: 100%;
-        transform: scale(1);
-    }
-
-    .portDisplay video {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-
-    .portDisplay iframe {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-
-    .portDisplay figure:hover {
-        transform: scale(0); 
-    }
-
-    .portDisplay figcaption {
-        font-size: 0.85rem;
-    }
-
-    .portDisplay a {
-        padding: 0.4rem;
-        font-size: 0.85rem;
-        margin: 0.5rem;
-    }
-
-    .tester {
-        font-size: 16px;
-    }
-
-    .animation figure::before,
-    .characters figure::before,
-    .props figure::before,
-    .gameplay figure::before {
-        font-size: 0.7rem;
-        text-align: center;
-    }
-
-    video {
-        scale: 80%;
-    }
-
+      
     /*reference*/
     .refe {
         font-size: 50%; 
@@ -668,48 +616,6 @@ My responsive design does not flow smoothly or scale properly. */
 
     .backToTopBtn {
         scale: 70%;
-    }
-
-    .portDisplay {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.3rem;
-        gap: 1rem;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .portDisplay figure {
-        justify-content: center;
-        width: 100%;
-        transform: scale(1);
-    }
-
-    .portDisplay video, .portDisplay iframe {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-
-    .portDisplay figure:hover {
-        transform: scale(0); 
-    }
-
-    .portDisplay figcaption, .portDisplay a {
-        font-size: 0.85rem;
-        padding: 0.4rem;
-        margin: 0.5rem;
-    }
-
-    .animation figure::before, .characters figure::before,
-    .props figure::before, .gameplay figure::before {
-        font-size: 0.7rem;
-        text-align: center;
-    }
-
-    video {
-        scale: 80%;
     }
 
     .refe {
