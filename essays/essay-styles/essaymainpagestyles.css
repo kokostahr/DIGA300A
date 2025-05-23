@@ -74,10 +74,16 @@ section ul {
 }
 
 section a {
-    color: var(--nav-link);
-    font-weight: 600;
-    list-style: square;
     text-decoration: none;
+    color: var(--nav-link);
+    font-size: 14px;
+    background: var(--intro-overlay);
+    border: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: var(--hover-colour);
+    margin: 1rem;
+    padding: 0.2rem;
 }
 
 section a:hover {

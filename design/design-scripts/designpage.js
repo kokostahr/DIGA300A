@@ -1,4 +1,4 @@
-//literally copying the bottom navigation from the blog & design pages
+//literally copying the bottom navigation from the blog pages
 //OPENING WITH 'WAIT FOR PAGE TO LOAD THEN IMPLEMENT'
 document.addEventListener("DOMContentLoaded", function () {
     //Want to start by putting my bottom navigation into this so that it doesn't havent to be hard coded "a static website"
@@ -8,8 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Gonna put all the relevant blog posts in an array. Will add more, as needed
     const blogPosts = [
-        {title: "Essay 1", url:"essay-one.html"},
-
+        {title: "Wiringframing process continued...", url:"design-wireframes.html"},
+        {title: "UX/UI Considerations", url:"design-uxui-considerations.html"},
+        {title: "Style Guides", url:"design-style-guide.html"},
+        {title: "Star's Reflections Part 1", url:"design-refections.html"},
+        {title: "Star's Reflections Part 2", url:"design-reflections-2.html"},
+        {title: "Star's Reflections Part 3", url:"design-reflections-3.html"},
     ];
     //now i need to somehow detect which page is open T^T so the right thing shows
     const currentOpenPage = window.location.pathname.split("/").pop();
@@ -32,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //displaying the 'back to blog homepage' link
-    botNavHTML += `<li><a href ="../essays-homepage.html">Back to Essay Home</a></li>`;
+    botNavHTML += `<li><a href ="../design-homepage.html">Back to Design Home</a></li>`;
 
     //displaying the next blog post
     if (currentIndex < blogPosts.length - 1) {
