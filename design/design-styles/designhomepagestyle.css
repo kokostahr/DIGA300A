@@ -40,9 +40,26 @@ section {
     margin: 1.3rem;
     padding: 0.7rem;
 }
-
 section ul {
-    list-style-type: square;
+    list-style-type: none;
+    padding-left: 1.5em;
+}
+
+section li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Custom star marker using ::before */
+section li::before {
+  content: "★"; 
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  color: var(--hover-yellow);
+  animation: flash 8s infinite;
 }
 
 section a {
@@ -54,4 +71,10 @@ section a {
 
 section a:hover {
     color: var(--hover-yellow);
+}
+
+/* Flashing animation */
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }

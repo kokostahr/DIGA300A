@@ -62,13 +62,31 @@ section {
 }
 
 section ul {
-    list-style-type: square;
+    list-style-type: none;
+    padding-left: 1.5em;
+}
+
+.deco li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Custom star marker using ::before */
+.deco li::before {
+  content: "★"; 
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: var(--hover-yellow);
+  animation: flash 8s infinite;
 }
 
 section a {
     color: var(--nav-link);
     font-weight: 600;
-    list-style: square;
+    list-style: none;
     text-decoration: none;
 }
 
@@ -84,6 +102,10 @@ section a:hover {
     align-items: flex-start;
 }
 
+.linkBtns li {
+    list-style-type: none;
+}
+
 .linkBtns a {
     background: var(--intro-overlay);
     border: solid;
@@ -94,3 +116,8 @@ section a:hover {
     padding: 0.5rem;
 }
 
+/* Flashing animation */
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
