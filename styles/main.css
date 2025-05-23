@@ -13,6 +13,17 @@
     --intro-overlay: rgba(170, 140, 245, 0.1);
 }
 
+/*ADDING ANIMATED STARS.  making sure they cover the whole screen*/
+#stars, #shooting-stars {
+    position: fixed; /* stays behind everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* behind your main content */
+    background: transparent; 
+}
+
 .navbar {
     background: var(--nav-bg);
     font-family: "Patrick Hand", cursive;
@@ -24,6 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: auto;
 }
 
 .sitenamelogo {
@@ -116,7 +128,7 @@ THIS IS A NEW ADDITION FOR JS Purposes*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 99999;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -165,6 +177,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    overflow-x: hidden;
 
     /*I want a cursor in my website*/
     cursor: url(../images/cursor.png), auto;
@@ -192,7 +205,8 @@ h2 {
     font-size: 22px;
     font-weight: 600;
     color: var(--hover-colour);
-    height: 100px;
+    height: 100%;
+    width: 100%;
 }
 
 figcaption {

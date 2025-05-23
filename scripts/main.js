@@ -149,6 +149,85 @@ document.addEventListener("DOMContentLoaded", function () {
             link.classList.add("active");
         }
     })
+
+    //Adding an pseudo animated background that looks like a bit like stars.... once again, these only work on the main/major pages IDK WHY!
+    particlesJS('stars', {
+        "particles": {
+            "number": {
+                "value": 80, // number of particles
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#fceea7" //hoveryeloow
+            },
+            "shape": {
+                "type": "circle" //giving it a boring circle shape for now, until i firgue out how to make star shapes
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 0.2,
+                    "opacity_min": 0,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 6,
+                "random": true
+            },
+            "line_linked": {
+                "enable": false 
+            },
+            "move": {
+                "enable": true,
+                "speed": 0.5,
+                "random": true, 
+                "direction": "none",
+                "out_mode": "out"  
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas", "events": {
+                "onhover": {
+                    "enable": false
+                },
+                "onclick": {
+                    "enable": false
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+    particlesJS('shooting-stars', {
+    "particles": {
+        "number": { "value": 10, "density": { "enable": false } },
+        "color": { "value": "#fceea7" },
+        "shape": { "type": "circle" },
+        "opacity": { 
+            "value": 0.3, 
+            "anim": {
+                "enable": true,
+                "speed": 0.7,
+                "opacity_min": 0,
+                "sync": false
+            }
+        },
+        "size": { "value": 2 },
+        "line_linked": { "enable": false },
+        "move": { "enable": true, "speed": 2.4, "direction": "none", "out_mode": "out" }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": false }, "onclick": { "enable": false } }
+    },
+    "retina_detect": true
+    });
 });
 
 

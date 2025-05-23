@@ -16,12 +16,16 @@
     https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
 <!-- JAVA SCRIPT LINKING -->
- <script src="scripts/classpractise.js"></script>
  <script src="scripts/main.js"></script>
-
+ <script src="scripts/classpractise.js"></script>
+ <script src="scripts/homepage.js"></script>
+ <script src="scripts/particles.js"></script>
 
 </head>
 <body>
+    <!--trying to add animated stars xD-->
+    <div id="stars"></div>
+    <div id="shooting-stars"></div>
     <header> 
         <nav class="navbar-placeholdar"></nav>
     </header>
@@ -54,6 +58,56 @@
 
             <section>
             <h3> Latest Works </h3>
+            <div class="carousel">
+                <button class="prev" id="prevBtn">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track"> <!--all the stuff will go inside-->
+                        <li class="carousel-item">
+                            <article class="work-card">
+                                <video loop autoplay muted src="portfolio/development/game-dev/dressupGameplay.mp4" width="290" height="190"></video>
+                                <p class="caption">
+                                    Prototype: Dress Up Gameplay. Play against an AI and compete in themed outfit challenges!
+                                </p>
+                                <a class="u-url" href="portfolio/portfolio-index.html"> View More...</a>
+                            </article>
+                        </li>
+
+                        <li class="carousel-item">
+                            <article class="work-card">
+                                <h4> Week 13: Dreams of an ethical internet</h4>
+                                <p class="caption">
+                                    In this post Star calls out the current internet 'structure' and its shady antics surrounding privacy, while 
+                                    dreaming up a digital world where users...   
+                                </p>
+                                <a class="u-url" href="blogs/academic/week-13-blog-post.html"> Read More...</a>
+                            </article>
+                        </li>
+
+                        <li class="carousel-item">
+                            <article class="work-card">
+                                <h4> Assignment 3 Design Reflection</h4>
+                                <p class="caption">
+                                    23 May Updated. A deeper look into the design decisions, thought processes
+                                    and growth experienced while building Starfish Galaxy.
+                                </p>
+                                <a class="u-url" href="design/design-pages/design-reflections-3.html"> Read More...</a>
+                            </article>
+                        </li>
+                    </ul>
+                    <button class="next" id="nextBtn">&#10095;</button>
+                </div>
+
+
+                
+
+                
+            </div>
+            </section>
+        </div>
+
+        <!--working on the carousel.........pasting this here incase I mess stuff up
+                    <section>
+            <h3> Latest Works </h3>
             <div class="fakeCaro">
                 <article class="work-card">
                     <video loop autoplay muted src="portfolio/development/game-dev/dressupGameplay.mp4" width="290" height="190"></video>
@@ -81,8 +135,8 @@
                     <a class="u-url" href="design/design-pages/design-refections.html"> Read More...</a>
                 </article>
             </div>
-        </div>
-
+            </section>
+            -->
        
     </main>
     

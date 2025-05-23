@@ -62,9 +62,114 @@ h3 {
     font-weight: 600;
     color: var(--heading-colour);
 }
+/*MAKING A BASIC CAROSUL!*/
+.carousel {
+    display: flex;
+    background-color: var(--card-bg);
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: fit-content;
+    margin: auto;
+    color: var(--text-colour);
+    padding: 1rem;
+    box-shadow: 0 0 15px var(--card-shadow);
+    backdrop-filter: blur(10px);
 
-/*SOMETHING AS A MOCK CAROSUL*/
+}
 
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/*Styling the caro*/
+.carousel .work-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.carousel:hover {
+    background: linear-gradient(145def, #201e42, #2e1e52);
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.3);
+    animation: sparklez 1.5s infinite alternate;
+}
+
+.carousel .caption {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin: 0.2rem;
+    padding: 0.5rem;
+}
+
+.carousel a {
+    text-decoration: none;
+    color: var(--nav-link);
+    font-size: 16px;
+    background: var(--intro-overlay);
+    border: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: var(--hover-colour);
+    margin: 1rem;
+    padding: 0.2rem;
+}
+
+.carousel a:hover {
+    color: var(--hover-yellow);
+}
+
+/*MAKEING SURE THAT ONLY ONE THING SHOWS AT A TIME*/
+.carousel-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: var(--hover-yellow);
+    border: none;
+    font-size: 3.5rem;
+    cursor: url("../images/pointer.png"), pointer;
+    user-select: none;
+    z-index: 9004;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+@keyframes sparklez {
+    0% {box-shadow: 0 0 5px var(--hover-colour);}
+    100% { box-shadow: 0 0 15px var(--text-colour);}
+}
+
+
+/*SOMETHING AS A MOCK CAROSUL. Hiding the mock caroul for now*/
+/*
 .fakeCaro {
     display: flex;
     justify-content: space-evenly;
@@ -118,10 +223,6 @@ h3 {
 
 .fakeCaro a:hover {
     color: var(--hover-yellow);
-}
+}*/
 
-@keyframes sparklez {
-    0% {box-shadow: 0 0 5px var(--hover-colour);}
-    100% { box-shadow: 0 0 15px var(--text-colour);}
-}
 
