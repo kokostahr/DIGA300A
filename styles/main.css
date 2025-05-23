@@ -49,7 +49,7 @@
 
 /*Setting up the flexbox for the navbar...let's see if this works*/
 .navlinks {
-   display: flex; 
+   display: flex;
    align-items: center;
    gap: clamp(0.75rem, 2vw, 1.25rem);
    list-style: none;
@@ -87,6 +87,53 @@ THIS IS A NEW ADDITION FOR JS Purposes*/
     text-shadow: 0 0 25px var(--hover-colour), 0 0 15px var(--hover-colour);
 }
 
+/*TRYING AGAIN WITH THE HAMBURGER MENU OH MY SOUL. firstly hiding it*/
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* styling for the hamburgerrrr */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--nav-link);
+    border-radius: 2px;
+}
+
+/*hiding the mobile navigation*/
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-overlay);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/*then show the overlay when active*/
+.nav-overlay.active {
+  display: flex;
+}
+
+/*the close buttttotoon for hamburgar.*/
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: var(--hover-yellow);
+    background: none;
+    border: none;
+    cursor: pointer;
+    }
 
 main {
     margin: 10px 0;
@@ -199,6 +246,31 @@ html{
     border-radius: 6px;
 }
 
+
+/*ensuring the hamburger only shows up on smaller screens*/
+@media screen and (max-width: 1000px) {
+    .hamburger {
+    display: flex;
+   /* flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    padding: 5px;*/
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* hidening hamburger on larger screens */
+@media screen and (min-width: 1001px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 /*Setting up mobile responsiveness...IDK IF THIS WILL WORK. It didn't end up working. Most of this code, particularly 
 relating to media queries and the responsive design has solutions from ChatGpt, which also  did not end up working.
 My responsive design does not flow smoothly or scale properly. */
@@ -227,6 +299,7 @@ My responsive design does not flow smoothly or scale properly. */
       align-items: center;
       gap: 10px;
     }
+    
 
     .navlinks a {
         font-size: clamp(0.8rem, 3vw, 1rem); 
@@ -442,7 +515,6 @@ My responsive design does not flow smoothly or scale properly. */
       .bot-navi li a:hover {
         color: var(--scrollbar-yellow);
       }
-
 
     .linkBtns li{
         flex-direction: column;

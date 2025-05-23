@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < pathDepth; i++) {
     basePagePath += "../";
     }*/
-   //old VERSION. nEED toBe ABle to detect how deep the page is T^T omg,.... im struggling. right now this only works on the pages, one folder deep.
+   //old VERSION. nEED toBe ABle to detect how deep the page is T^T omg,.... im struggling. right now this navigation only works on the main pages (in the nav bar), one folder deep.
    if (currentPagePath.includes("/portfolio/")) {
     basePagePath = "../";
     if (currentPagePath.includes("/portfolio/commissions")) {
@@ -77,14 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
         basePagePath = "";
     }
 
-    //Building the navigation layout! 
+    //Building the navigation layout! WHY CAN'T YOU ADD COMMENTS INTO THE THE BACKTICK??????? (`)
     const navHTML = `
       <nav class="navbar">
     <div class="sitenamelogo">
       <figure><img class="logo" src="${basePagePath}images/star-logo.png" alt="logo of a star on a fishhook"></figure>
       <h1 class="site-title"> Starfish <br> Galaxy </h1>
     </div>
-    <ul class="navlinks">
+    <!--Desktop navigation so it STOPS DISAPPEARING!-->
+    <ul class="navlinks desktop-nav">
       <li><a href="${basePagePath}index.html" data-page="index.html">Home</a></li>
       <li><a href="${basePagePath}blogs/blog-home.html" data-page="blog-home.html">Blogz</a></li>
       <li><a href="${basePagePath}profile/profilehomepage.html" data-page="profilehomepage.html">Profile</a></li>
@@ -93,10 +94,45 @@ document.addEventListener("DOMContentLoaded", function () {
       <li><a href="${basePagePath}portfolio/portfolio.html" data-page="portfolio.html">Portfolio</a></li>
       <li><a href="${basePagePath}portfolio/commissions.html" data-page="commissions.html">Commissions</a></li>
     </ul>
+    
+    <!--Hamburger nav for smaller screens-->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--The overlay screen for smaller screens-->
+    <div class="nav-overlay" id="nav-overlay">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul class="navlinks mobile-nav">
+      <li><a href="${basePagePath}index.html" data-page="index.html">Home</a></li>
+      <li><a href="${basePagePath}blogs/blog-home.html" data-page="blog-home.html">Blogz</a></li>
+      <li><a href="${basePagePath}profile/profilehomepage.html" data-page="profilehomepage.html">Profile</a></li>
+      <li><a href="${basePagePath}essays/essays-homepage.html" data-page="essays-homepage.html">Essays</a></li>
+      <li><a href="${basePagePath}design/design-homepage.html" data-page="design-homepage.html">Design</a></li>
+      <li><a href="${basePagePath}portfolio/portfolio.html" data-page="portfolio.html">Portfolio</a></li>
+      <li><a href="${basePagePath}portfolio/commissions.html" data-page="commissions.html">Commissions</a></li>
+    </ul>
+    </div>
+  
   </nav>
     `;
     //calling the nav container inside the html, and assigning all this juicy stuff to it.
     navPlaceHolder.innerHTML = navHTML;
+
+    //Adding the functionality for the close and open butttooonnnsss of the navbar
+    const hamburger = document.getElementById("hamburger");
+    const overlay = document.getElementById("nav-overlay");
+    const closeBtn = document.getElementById("close-btn");
+    //open and closee the overlay
+    if (hamburger && overlay && closeBtn) {
+        hamburger.addEventListener("click", () => {
+        overlay.classList.toggle("active");
+    });
+        closeBtn.addEventListener("click", () => {
+        overlay.classList.remove("active");
+    });
+    }
     //tHEN We need to find a way to detect the atcitve page, so that it can highlight the appropriate navlink
     const allDaLinks = document.querySelectorAll(".navlinks a");
     //This code is checking the name of the active page, and it will assign the 'active' class from the CSS to it, so 
