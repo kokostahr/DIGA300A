@@ -80,6 +80,29 @@
     align-items: center;
 }
 
+/*styling the link buttons*/
+section ul {
+    list-style-type: none;
+    padding-left: 1.5em;
+}
+
+.deco li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Custom star marker using ::before */
+.deco li::before {
+  content: "★"; 
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: var(--hover-yellow);
+  animation: flash 8s infinite;
+}
+
 figcaption {
     font-size: 16px;
     font-style: normal;
@@ -156,5 +179,11 @@ cite{
     /*color:#160649;
     background: linear-gradient(30deg, var(--hover-colour) , var(--scrollbar-yellow));
     animation: gradient 15s ease infinite;*/
+}
+
+/* Flashing animation */
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
 

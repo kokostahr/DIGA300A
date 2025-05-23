@@ -166,7 +166,27 @@ button.next {
     0% {box-shadow: 0 0 5px var(--hover-colour);}
     100% { box-shadow: 0 0 15px var(--text-colour);}
 }
+/*mobile responsiveness*/
+@media screen and (min-width:360px) and (max-width: 600px) {
+    .carousel .carousel-item {
+    flex: 0 0 100%; 
+    max-width: 100%;
+}
 
+/*tablet responsiveness*/
+ @media screen and (min-width:601px) and (max-width: 1024px) {
+    .carousel .carousel-item {
+    flex: 0 0 50%; 
+    max-width: 50%;
+ }
+
+ /* Large screens */
+@media (min-width: 1025px) {
+  .carousel .carousel-item {
+    flex: 0 0 33.33%; /* 3 items per slide */
+    max-width: 33.33%;
+  }
+}
 
 /*SOMETHING AS A MOCK CAROSUL. Hiding the mock caroul for now*/
 /*
