@@ -171,6 +171,7 @@ button.next {
     .carousel .carousel-item {
     flex: 0 0 100%; 
     max-width: 100%;
+    }
 }
 
 /*tablet responsiveness*/
@@ -178,6 +179,7 @@ button.next {
     .carousel .carousel-item {
     flex: 0 0 50%; 
     max-width: 50%;
+    }
  }
 
  /* Large screens */

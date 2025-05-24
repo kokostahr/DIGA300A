@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {title: "Week 11", url:"week-11-blog-post.html"},
         {title: "Week 12", url:"week-12-blog-post.html"},
         {title: "Week 13", url:"week-13-blog-post.html"},
+        {title: "Week 14", url:"week-14-blog-post.html"},
     ];
     //now i need to somehow detect which page is open T^T so the right thing shows
     const currentOpenPage = window.location.pathname.split("/").pop();
