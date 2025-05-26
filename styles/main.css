@@ -776,17 +776,6 @@ My responsive design does not flow smoothly or scale properly. */
         width: auto;
     }
 
-    .fakeCaro {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 4rem;
-        gap: 2rem;
-    }
-
-    .fakeCaro .work-card {
-        width: 30%;
-    }
-
     .pictextContainer {
         flex-direction: row;
         justify-content: space-around;
