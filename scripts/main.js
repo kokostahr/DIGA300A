@@ -42,29 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
     //adding the function to the button now
     toTopBtn.addEventListener("click", scrollToTop);
     }
-   
+
     //DYNAMIC NAV BAR   
-    //Making a dynamic nav bar (hopefully this will stop the terrible glitching) using this tutorial: https://youtu.be/ThSaI0kuez8?si=wPBXZp8SJQuKwYbP
+    /*Making a dynamic nav bar (hopefully this will stop the terrible glitching) using this tutorial: https://youtu.be/ThSaI0kuez8?si=wPBXZp8SJQuKwYbP
     //need to find the page location, using the page pathname..harder than i thought ( ͠° ͟ʖ ͡°) making a ref to the nav div and the currreent page
-    const navPlaceHolder = document.querySelector(".navbar-placeholdar");
+    */const navPlaceHolder = document.querySelector(".navbar-placeholdar");
     const currentPagePath = window.location.pathname;
     //NOW I NEED SMTH TO FIGURE OUT WHICH PAGE WE'RE ON, how deep it goes into the folders ૮(˶╥︿╥)ა
     //making a variable that will find and fill in the relevant reference path based on the current active page
     let basePagePath ="";
-    /*New version 2. Instead of hard-coding each folder name, going to try and make a dyamic code that just
-    detects the folder depth. Did this with chat because I honestly couldn't figure out what was wrong T^T
-    the nav bar would break on pages that were 2 folders deep and more. Pleas work
-    Will need to calculate how deep the opened page is in the whole folder structure. winow.location.path..etc
-    will find the pathway of the opened page. using the split"/" to detect and splitinto parts at each forward slash
-    helps with detection I assume? filter will remove empty strings. length counts how many folder levels there are,
-    and -1 will remove 1 to get to the actual last part, which is the file.
-    */
-    /*const pathDepth = currentPagePath.split("/").filter(folder => folder !== "").length - 1;
-    // will create and repeat "../" for each foldar level, the deeper the current page is... i in this case is a number, the level number.
-    for (let i = 0; i < pathDepth; i++) {
-    basePagePath += "../";
-    }*/
-   //old VERSION. nEED toBe ABle to detect how deep the page is T^T omg,.... im struggling. right now this navigation only works on the main pages (in the nav bar), one folder deep.
+    
+
+   //NEED toBe ABle to detect how deep the page is T^T omg,.... im struggling. right now this navigation only works on the main pages (in the nav bar), one folder deep.
    if (currentPagePath.includes("/portfolio/")) {
     basePagePath = "../";
     if (currentPagePath.includes("/portfolio/commissions")) {
@@ -76,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         basePagePath = "";
     }
-
+    
     //Building the navigation layout! WHY CAN'T YOU ADD COMMENTS INTO THE THE BACKTICK??????? (`)
     const navHTML = `
       <nav class="navbar">
