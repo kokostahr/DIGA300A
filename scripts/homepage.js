@@ -43,10 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     //AN OPTIONAL JUICY THING TO MAKE IT SLIDE EVERY 3 SECONDS. 
-       /* setInterval(() => {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateCarousel();
-    }, 3000); adding the autoplay feature so that i can reset it when users
+       /*adding the autoplay feature so that i can reset it when users
     click the arrows*/
     let autoPlay = setInterval(() => {
         currentIndex = (currentIndex + 1) % items.length;
@@ -61,5 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
             updateCarousel();
         }, 4000);
     }
+
+    /**Adding swipe support for touch screen devices */
+    let startX = 0;
+    track.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (diff > 50) {
+            nextButton.click();
+        } else if (diff < -50) {
+            prevButton.click();
+        }
+    });
 
 })
