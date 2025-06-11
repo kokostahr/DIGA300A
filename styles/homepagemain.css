@@ -96,19 +96,28 @@ h3 {
     margin: 0;
     list-style: none;
     transition: transform 0.5s ease-in-out;
+    min-width: 0;
 }
 
 /*MAKEING SURE THAT ONLY ONE THING SHOWS AT A TIME*/
 .carousel-item {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 90%;
     box-sizing: border-box;
+    min-width: 100%;
 }
 
 /*Ensuring the items being displayed aren't causing these annoying layout issues!*/
 .work-card {
     width: 100%;
     box-sizing: border-box;
+}
+
+.work-card video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /*Styling the caro*/
