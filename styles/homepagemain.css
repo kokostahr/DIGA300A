@@ -62,6 +62,7 @@ h3 {
     font-weight: 600;
     color: var(--heading-colour);
 }
+
 /*MAKING A BASIC CAROSUL!*/
 .carousel {
     display: flex;
@@ -89,12 +90,25 @@ h3 {
 
 .carousel-track {
     display: flex;
+    flex-wrap: nowrap;
     transition: transform 0.5s ease;
     padding: 0;
     margin: 0;
     list-style: none;
-    display: flex;
     transition: transform 0.5s ease-in-out;
+}
+
+/*MAKEING SURE THAT ONLY ONE THING SHOWS AT A TIME*/
+.carousel-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/*Ensuring the items being displayed aren't causing these annoying layout issues!*/
+.work-card {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /*Styling the caro*/
@@ -135,13 +149,7 @@ h3 {
     color: var(--hover-yellow);
 }
 
-/*MAKEING SURE THAT ONLY ONE THING SHOWS AT A TIME*/
-.carousel-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-button.prev, button.next {
+button.prev, button.next { 
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
