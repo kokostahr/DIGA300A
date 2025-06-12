@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="portfolio-styles/portfoliomainstyles.css"/>
+    <link rel="stylesheet" href="portfolio-styles/commissionstyles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="
@@ -17,6 +18,7 @@
     <!--JAvaScript Linkinh-->
     <script src="../scripts/main.js"></script>
     <script src="../scripts/particles.js"></script>
+    <script src="portfolio-scripts/commissionscripts.js"></script>
 </head>
 <body>
         <!--trying to add animated stars xD-->
@@ -28,17 +30,44 @@
     </header>
     
     <main>
-        <div class="h-entry">
-            <div class="introContainer">
-                <h2> Commissions</h2>
-                <p> Coming Soon...</p>
-                <!-- Going to add different sections relating to commisions for art works, games and 3d modelling -->
-            </div>
+        <h2> Commissions</h2>
+        <!--idk what to add to this page...so let's just add a form-->
+        <section class="form-container">
+            <h2>Request a Commission</h2>
+            <form id="commissionForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Galactic Name..." required />
 
-        </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="you@universe.com" required />
+
+                <label for="type">Type of Commission:</label>
+                <select id="type" required>
+                <option value="">Select a type</option>
+                <option value="art">🎨 Art</option>
+                <option value="game">🕹️ Game Asset</option>
+                <option value="3d">🧍‍♀️ 3D Model</option>
+                <option value="3d">🎮 2D Mini-Game</option>
+                <option value="3d">🎮 3D Mini-Game</option>
+                </select>
+
+                <label for="desc">Project Description:</label>
+                <textarea id="desc" placeholder="Tell me a bit more about your cosmic project..." required></textarea>
+
+                <label for="budget">Budget ($):</label>
+                <input type="number" id="budget" min="1" placeholder="Galaxy dollars only 💸" required />
+
+                <button type="submit">Send to the Stars 🚀</button>
+            </form>
+
+            <div id="confirmation" class="hidden">
+                <p>Thanks for reaching out, you sparkly alien! I’ll float back to you soon! -`♡´-</p>
+            </div>
+        </section>
 
     </main>
 
+    <button class="backToTopBtn">Back to top</button>
     <footer class="ftr">
         <p>©️Copyrighted by me. No stealing! Wits Digital Arts 2025. Find me in the stars...by clicking my links. Yes.</p> 
         <nav class="footer-links">
