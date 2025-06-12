@@ -22,7 +22,6 @@
 
 /*placing the top of the blog posts inside a nice box?*/
 .introContainer {
-    font-size: 22px;
     color: var(--text-colour);
     background: var(--intro-overlay);
     border: solid;

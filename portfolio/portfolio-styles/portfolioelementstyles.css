@@ -123,7 +123,7 @@ body {
 /*Adding the lightbox styling for the JavaScript purposes
 */
 .lightbox {
-    display: flex;
+    display: none;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -138,6 +138,10 @@ body {
     padding: 2rem;
     box-sizing: border-box;
     overflow-y: auto;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    animation: none;
 }
 
 /* Fixing the lightbox content*/
@@ -235,13 +239,18 @@ body {
     100% { box-shadow: 0 0 0.94rem var(--text-colour);}
 }
 
-@media (max-width: 768) {
-    video {
-        scale: 40%;
+@keyframes lightboxFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
-/*responsiveness in the approriate section*/
+/*responsiveness in the approriate section. phones*/
 @media screen and (min-width:360px) and (max-width: 600px) {
     /* Portfolio responsiveness. WHY WONNNT IT WORKOUUUT T^T IM SO TIRED*/
     .portDisplay {
@@ -249,41 +258,32 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0.3rem;
-        gap: 1rem;
-        flex-wrap: wrap;
-        width: 100%;
+        padding: 1rem;
+        gap: 1.5rem;
     }
+
     .portDisplay figure {
-        justify-content: center;
         width: 100%;
-        transform: scale(1);
-    }
-
-    .portDisplay video {
-        width: 100%;
-        max-width: 18.75rem;
-        height: auto;
-    }
-
-    .portDisplay iframe {
-        width: 100%;
-        max-width: 18.75rem;
-        height: auto;
+        max-width: 320px;
+        transform: none !important;
     }
 
     .portDisplay figure:hover {
-        transform: scale(0); 
+        transform: none;
+        animation: none;
+        box-shadow: 0 0 0.5rem var(--card-shadow);
     }
 
-    .portDisplay figcaption {
-        font-size: 0.85rem;
+    .portDisplay video,
+    .portDisplay iframe {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
+    .portDisplay figcaption,
     .portDisplay a {
-        padding: 0.4rem;
         font-size: 0.85rem;
-        margin: 0.5rem;
     }
 
     .tester {
@@ -294,7 +294,7 @@ body {
     .characters figure::before,
     .props figure::before,
     .gameplay figure::before {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         text-align: center;
     }
 
@@ -304,42 +304,32 @@ body {
 }
 
 /*tablet responsiveness*/
-  @media screen and (min-width:600px) and (max-width: 1024px) {
+  @media screen and (min-width:601px) and (max-width: 1024px) {
     .portDisplay {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1rem;
-        flex-wrap: wrap;
-        width: 100%;
+        padding: 2rem;
     }
 
     .portDisplay figure {
-        justify-content: center;
         width: 100%;
-        transform: scale(1);
+        transform: none !important;
     }
 
     .portDisplay video, .portDisplay iframe {
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
         height: auto;
     }
 
-    .portDisplay figure:hover {
-        transform: scale(0); 
-    }
-
     .portDisplay figcaption, .portDisplay a {
-        font-size: 0.85rem;
-        padding: 0.4rem;
-        margin: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .animation figure::before, .characters figure::before,
     .props figure::before, .gameplay figure::before {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         text-align: center;
     }
 

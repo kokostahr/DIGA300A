@@ -10,6 +10,13 @@
     --hover-yellow: #fceea7;
 }
 
+/*page box shadow*/
+.h-entry {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    padding: 1rem;
+}
+
 /*placing the top of the blog posts inside a nice box?*/
 .introContainer {
     color: var(--text-colour);
@@ -22,7 +29,14 @@
     padding: 1rem;
 }
 
-.introContainer a
+.introContainer a{
+    text-decoration: none;
+    color: var(--nav-link);
+}
+
+.introContainer a:hover {
+    color: var(--hover-colour);
+}
 
 h3 {
     font-family: "Quicksand", sans-serif;

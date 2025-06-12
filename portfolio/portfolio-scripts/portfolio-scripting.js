@@ -17,25 +17,30 @@ document.addEventListener("DOMContentLoaded", function (){
     /**This function, well, it will open the lightbox */
     function openLightbox(src, caption) {
         lightbox.style.display = "flex";
+
+        //adding a juicy opening anim. waiting for the lightbox to display before animaiton
+        requestAnimationFrame(() => {
+            lightbox.style.opacity = "1";
+            lightbox.style.transform = "scale(1)";
+        });
+
         lightboxVid.src = src;
         captionText.textContent = caption;
     }
 
     /**This function will, obviously close the lightbox */
     function closeLightbox() {
-        lightbox.style.display = "none";
+        //adding fade out anim.
+        lightbox.style.opacity = "0";
+        lightbox.style.transform = "scale(0.95)";
 
-    // Pause only if it's a video, not an iframe
-    if (lightboxVid.tagName.toLowerCase() === "video") {
-        lightboxVid.pause();
-        lightboxVid.src = "";
-    } /*else { //currently the code relating to youtube videos and iframes breaks the lightbox, and stops it from working. Will fix later
-        // Remove iframe for cleanup if using iframe (YouTube)
-        const iframe = lightbox.querySelector("iframe");
-        if (iframe) {
-            iframe.remove(); // Clean up to stop YouTube playback
-        }
-    }*/
+        setTimeout(() => {
+            lightbox.style.display = "none";
+            if (lightboxVid.tagName.toLowerCase() === "video") {
+                lightboxVid.pause();
+                lightboxVid.src = "";
+            }
+        }, 400);
     }
 
     //doing something that will open the lightbox for each gellery item...and set a click event for each figure
@@ -78,6 +83,12 @@ document.addEventListener("DOMContentLoaded", function (){
         if (e.key === "Escape") {
             closeLightbox();
         }
+        //added keyboard navigation. does it work? lol.
+        if (e.key === "ArrowRight") {
+            showItem(currentIndex + 1);
+        } else if (e.key === "ArrowLeft") {
+                showItem(currentIndex - 1);
+        }
     });
 
     
@@ -113,9 +124,6 @@ document.addEventListener("DOMContentLoaded", function (){
     nextBtn.addEventListener("click", () => {
         showItem(currentIndex + 1);
     });
-
-
-    //SAVING A SPACE FOR KEYBOARD NAVIGATION
 
     //adding a filter to the port
     const filterButtons = document.querySelectorAll(".filter-btn");

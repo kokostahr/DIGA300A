@@ -238,7 +238,7 @@ html{
 .backToTopBtn {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    right: 1.5rem;
     z-index: 9999;
     padding: 0.1rem 1.2rem;
     font-size: 2.8rem;
