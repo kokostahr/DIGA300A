@@ -116,4 +116,27 @@ document.addEventListener("DOMContentLoaded", function (){
 
 
     //SAVING A SPACE FOR KEYBOARD NAVIGATION
+
+    //adding a filter to the port
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const filterItems = document.querySelectorAll(".filter-item");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            // Add active class to clicked button
+            button.classList.add("active");
+
+            const filterValue = button.getAttribute("data-filter");
+
+            filterItems.forEach(item => {
+                if (filterValue === "all" || item.classList.contains(filterValue)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
 });

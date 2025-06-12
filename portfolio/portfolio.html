@@ -55,7 +55,15 @@
                 <span class="next" id="next"> &#10095;</span>
             </div>
 
-            <section >
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Show All</button>
+                <button class="filter-btn" data-filter="2d-anim">2D Animations</button>
+                <button class="filter-btn" data-filter="3d-char">3D Characters</button>
+                <button class="filter-btn" data-filter="3d-prop">3D Props</button>
+                <button class="filter-btn" data-filter="game-play">Gameplay</button>
+            </div>
+
+            <section class="filter-item 2d-anim">
                 <h3> 2D Animations </h3>
                 <div class="animation">
                     <div class="portDisplay">
@@ -103,7 +111,7 @@
                 
             </section>
     
-            <section>
+            <section class="filter-item 3d-char">
                 <h3> 3D Characters </h3>
                 <div class="characters">
                     <div class="portDisplay">
@@ -159,7 +167,7 @@
                 </div>                
             </section>
 
-            <section>
+            <section class="filter-item 3d-prop">
                 <h3> 3D Props </h3>
                 <div class="props">
                     <div class="portDisplay">
@@ -212,7 +220,7 @@
     
             </section>
 
-            <section>
+            <section class="filter-item game-play">
                 <h3> Gameplay </h3>
                 <div class="gameplay">
                     <div class="portDisplay">
