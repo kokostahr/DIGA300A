@@ -55,55 +55,98 @@
                 <a class="u-url" href="https://www.youtube.com/@Koko_stahp"> Star's Youtube</a>
             </section>
        
+        <!--API ZONE...im greedy i want a few different APIs T^T-->   
+            <section id="cosmic-info" class="api-section">
+                <div id="nasa-apod-api" class="api-widget">
+                    <div class="nasa-apod-info">
+                        <h3>NASA's Astronomy Pic of the Day🚀</h3>
+                        <img id="apod-image" src="" alt="Nasa Astrology Picture of the Day"
+                        style="max-width: 40%; border-radius: 0.5rem;">
+                        <p id="apod-description">Image Description loading...</p>
+                    </div>   
+                </div>                
+
+                <div id="weather-api" class="api-widget">
+                <h3>Current Weather in JHB</h3>
+                <div class="weather-info">
+                    <img id="weather-icon" src="" alt="Weather icon" />
+                    <p id="weather-temp">--</p>
+                    <p id="weather-desc">Loading...</p>
+                </div>
+                </div>
+                    
+                <div id="moonphase-api" class="api-widget">
+                        <h3>Current Moon Phase🌙</h3>
+                        <div class="moon-info">
+                            <!--wanna add a cute animation...dono if its possible T^T-->
+                            <div id="moon-icon" style="font-size: 3rem;">🌚</div>
+                            <p id="moonphase-data">Moon phase loading...</p>
+                            <p id="moonrise-time">Moonrise loading...</p>
+                            <p id="moonset-time">Moonset loading...</p>
+                        </div>    
+                    </div>
+            </section>
 
             <section>
-            <h3> Latest Works </h3>
-            <div class="carousel">
-                <button class="prev" id="prevBtn">&#10094;</button>
-                <div class="carousel-track-container">
-                    <ul class="carousel-track"> <!--all the stuff will go inside-->
-                        <li class="carousel-item">
-                            <article class="work-card">
-                                <video loop autoplay muted src="portfolio/development/game-dev/dressupGameplay.mp4" width="290" height="190"></video>
-                                <p class="caption">
-                                    Prototype: Dress Up Gameplay. Play against an AI and compete in themed outfit challenges!
-                                </p>
-                                <a class="u-url" href="portfolio/portfolio-index.html"> View More...</a>
-                            </article>
-                        </li>
+                <h3> Latest Works </h3>
+                <div class="carousel">
+                    <button class="prev" id="prevBtn">&#10094;</button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track"> <!--all the stuff will go inside-->
+                            <li class="carousel-item">
+                                <article class="work-card">
+                                    <video loop autoplay muted src="portfolio/development/game-dev/dressupGameplay.mp4" width="290" height="190"></video>
+                                    <p class="caption">
+                                        Prototype: Dress Up Gameplay. Play against an AI and compete in themed outfit challenges!
+                                    </p>
+                                    <a class="u-url" href="portfolio/portfolio-index.html"> View More...</a>
+                                </article>
+                            </li>
 
-                        <li class="carousel-item">
-                            <article class="work-card">
-                                <h4> Week 14: Justice and Ethics in Art and Code</h4>
-                                <p class="caption">
-                                   In this week's blog post, Star shares her thoughts on how justice and ethics show up in creative and 
-                                   technical work. She acknowledges...    
-                                </p>
-                                <a class="u-url" href="blogs/academic/week-13-blog-post.html"> Read More...</a>
-                            </article>
-                        </li>
+                            <li class="carousel-item">
+                                <article class="work-card">
+                                    <h4> Week 14: Justice and Ethics in Art and Code</h4>
+                                    <p class="caption">
+                                    In this week's blog post, Star shares her thoughts on how justice and ethics show up in creative and 
+                                    technical work. She acknowledges...    
+                                    </p>
+                                    <a class="u-url" href="blogs/academic/week-13-blog-post.html"> Read More...</a>
+                                </article>
+                            </li>
 
-                        <li class="carousel-item">
-                            <article class="work-card">
-                                <h4> Assignment 3 Design Reflection</h4>
-                                <p class="caption">
-                                    23 May Updated. A deeper look into the design decisions, thought processes<br>
-                                    and growth experienced while building Starfish Galaxy.
-                                </p>
-                                <a class="u-url" href="design/design-pages/design-reflections-3.html"> Read More...</a>
-                            </article>
-                        </li>
-                    </ul>
+                            <li class="carousel-item">
+                                <article class="work-card">
+                                    <h4> Assignment 3 Design Reflection</h4>
+                                    <p class="caption">
+                                        23 May Updated. A deeper look into the design decisions, thought processes<br>
+                                        and growth experienced while building Starfish Galaxy.
+                                    </p>
+                                    <a class="u-url" href="design/design-pages/design-reflections-3.html"> Read More...</a>
+                                </article>
+                            </li>
+                        </ul>
                     <button class="next" id="nextBtn">&#10095;</button>
+                    </div>  
                 </div>
-
-
-                
-
-                
-            </div>
             </section>
         </div>
+    </main>
+    
+    <button class="backToTopBtn">Back to top</button>
+    
+    <footer class="ftr">
+        <p>©️Copyrighted by me. No stealing! Wits Digital Arts 2025. Find me in the stars...by clicking my links. Yes.</p> 
+        <nav class="footer-links">
+            <a href="profile/profilehomepage.html">Star's Profile</a> |
+            <a href="https://github.com/kokostahr">Star's GitHub</a> |
+            <a href="https://www.youtube.com/@Koko_stahp">Star's YouTube</a> |
+            <a href="https://kokostahr.github.io/DIGA300A/portfolio/portfolio.html">Star's Portfolio</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
+
 
         <!--working on the carousel.........pasting this here incase I mess stuff up
                     <section>
@@ -137,14 +180,3 @@
             </div>
             </section>
             -->
-       
-    </main>
-    
-    <button class="backToTopBtn">Back to top</button>
-    
-    <footer class="ftr">
-        ©️Copyrighted by me. No stealing! Wits Digital Arts 2025
-     </footer>
-
-</body>
-</html>

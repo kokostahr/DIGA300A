@@ -1,0 +1,12 @@
+:root{
+    --nav-bg: #3f1754;
+    --nav-link: #809bf7;
+    --hover-colour: #f0f8ff;
+    --webpage-bg: #160649;
+    --heading-colour: #aeeaff;
+    --text-colour: #9dd7f7;
+    --footer: rgba(170, 140, 245, 0.3); 
+    --bg-overlay:  rgba(22,6,73,0.6);
+    --hover-yellow: #fceea7;
+    --intro-overlay: rgba(170, 140, 245, 0.1);
+}

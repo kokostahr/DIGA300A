@@ -196,17 +196,33 @@ h2 {
 }
 
 /*this is the styling for the footer*/
-.ftr{
+.ftr {
     background: rgba(170, 140, 245, 0.3);
-   /* background: #6b8cf5;*/
     font-family: "Patrick Hand", cursive;
     text-align: center;
-    justify-content: center;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 600;
     color: var(--hover-colour);
-    height: 100%;
+    padding: 1.2rem;
     width: 100%;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.footer-links a {
+    color: var(--nav-link);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--hover-yellow);
+    text-shadow: 0 0 0.313rem var(--hover-colour);
 }
 
 figcaption {
