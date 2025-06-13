@@ -15,10 +15,10 @@
     background: var(--intro-overlay);
     color: var(--text-colour);
     padding: 2rem;
-    border-radius: 20px;
-    max-width: 600px;
+    border-radius: 1.25rem;
+    max-width: 37.5rem;
     margin: 2rem auto;
-    box-shadow: 0 0 20px rgba(174, 234, 255, 0.3);
+    box-shadow: 0 0 1.25rem rgba(174, 234, 255, 0.3);
 }
 
 .form-container h2 {

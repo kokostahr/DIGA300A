@@ -12,7 +12,7 @@
 
 /*page box shadow*/
 .h-entry {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     margin: 2rem;
     padding: 1rem;
 }
@@ -22,8 +22,8 @@
     color: var(--text-colour);
     background: var(--intro-overlay);
     border: solid;
-    border-width: 5px;
-    border-radius: 5px;
+    border-width: 0.312rem;
+    border-radius: 0.312rem;
     border-color: var(--hover-colour);
     margin: 2rem;
     padding: 1rem;
@@ -40,7 +40,7 @@
 
 h3 {
     font-family: "Quicksand", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.5;
     color: var(--text-colour);
 }
@@ -48,7 +48,7 @@ h3 {
 section {
     
     font-family: "Quicksand", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.5;
     color: var(--text-colour);
     margin: 1.3rem;
@@ -61,7 +61,7 @@ section ul {
 
 section li {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 /* Custom star marker using ::before */
