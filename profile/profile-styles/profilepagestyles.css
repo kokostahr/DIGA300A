@@ -13,7 +13,7 @@
 
 /*page box shadow*/
 .h-entry {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     margin: 2rem;
     padding: 1rem;
 }
@@ -23,15 +23,15 @@
     color: var(--text-colour);
     background: var(--intro-overlay);
     border: solid;
-    border-width: 5px;
-    border-radius: 5px;
+    border-width: 0.3125rem;
+    border-radius: 0.3125rem;
     border-color: var(--hover-colour);
     margin: 2rem;
     padding: 1rem;
 }
 
 .h-entry .p-summary {
-  margin-top: 15px;
+  margin-top: 0.94rem;
   font-size: 1.1rem;
   color: var(--heading-colour) ; 
 }
@@ -46,7 +46,7 @@
 
 h3 {
     font-family: "Quicksand", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.5;
     color: var(--text-colour);
 }
@@ -54,7 +54,7 @@ h3 {
 section {
     
     font-family: "Quicksand", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.5;
     color: var(--text-colour);
     margin: 1.3rem;
@@ -68,7 +68,7 @@ section ul {
 
 .deco li {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 /* Custom star marker using ::before */
@@ -98,7 +98,7 @@ section a:hover {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: flex-start;
 }
 
@@ -109,8 +109,8 @@ section a:hover {
 .linkBtns a {
     background: var(--intro-overlay);
     border: solid;
-    border-width: 2px;
-    border-radius: 6px;
+    border-width: 0.125rem;
+    border-radius: 0.375rem;
     border-color: var(--hover-colour);
     margin: 1rem;
     padding: 0.5rem;
