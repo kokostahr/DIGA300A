@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Design Reflections</title>
+    <title>Final Exam Design Reflections</title>
     <meta name="description" content="This section of the website was used as a space to reflect on the whole development process of the website
-    as whole. Contains a lot of wondering, rants and strongly opinionated thoughts.">
+    as whole. My first website, Starfish Galaxy, was a fun ride of code and cosmic creativity mixed into one! From folder frustration to JavaScript 
+    jump scares, I built a dreamy digital galaxy and learned soooo much along the way.">
     <link rel="stylesheet" href="../../styles/normalise.css" />
     <link rel="stylesheet" href="../../styles/main.css" />
     <link rel="stylesheet" href="../design-styles/designpagestyles.css" />
@@ -52,13 +53,11 @@
             </ul>
         </nav>
     </header>
-
-
-
+    
     <main>
         <article class="h-entry" data-article-type="blog">
            <div class="introContainer">
-                <h2 class="p-name"> Reflections: Part 4  </h2>
+                <h2 class="p-name"> Reflections Part 4: Reflection on the implementation of my 1st Website: Starfish Galaxy  </h2>
                 <p>
                     by <a class="p-author h-card" href="../../profile/profilehomepage.html"> Star Nkosi </a>
                 </p>
@@ -68,298 +67,240 @@
                     Last updated: <time class="dt-update" datetime="2025-05-23"> 23 May 2025</time>
                 </p>
                 <p class="p-summary">
-                In this design post, Star shares her thoughts and reflections concerning the overall process of the continued building of
-                her website, and adding CSS elements to it. Get some popcorn...it's a long read
+                    Starfish Galaxy was the first full (kinda) website I've ever created... and it shows😅! It’s not perfect, 
+                    especially in terms of accessibility for slower networks, but it’s a huge milestone for me. I’m walking away 
+                    with lessons in structure, interactivity, semantic HTML, and the real meaning of performance. It’s only the beginning.
+                    And I am truly grateful that I got to learn from, and share this experience with my lecturers and tutors. જ⁀➴ ♡
                 </p>
         </div>
 
             <section data-type="thoughts and reflection-and-thoughts">
-                <h3> Reflections for Exam Submission</h3>
-                <h4>General Reflection</h4>
                 <p>
-
+                    When I started jotting down ideas for my website, I honestly had no clear vision of what it would 
+                    eventually look like, let alone how I would actually build it from scratch. The process felt daunting 
+                    at first, and I was not sure where to start or how to bring my ideas to life. Thankfully, with the 
+                    guidance and support of the tutors and lecturers, I was able to ask questions, tackle challenges and 
+                    slowly piece together a website that I am proud of.
                 </p>
 
                 <p>
-
-                </p>
-                <div class="pictextContainer">
-                    <figure>
-                        <img class="u-photo" src="" 
-                        alt="Third wireframe design for" width="390" height="270">
-                        <figcaption> </figcaption>
-                    </figure>
-
-                    <p> 
-
-                    </p>
-
-                </div>
-
-                <p>
-                     
-                </p>
-
-                <p>
-                    
+                    Thank you for everything. 
                 </p>
             </section>
 
             <section data-type="thoughts and reflection-and-thoughts">  
-                <h4></h4>
+                <h4>Folder Structure:</h4>
                 <p>
-                   
+                   When setting up my website folder, I aimed to mirror the hierarchical information structure of my content. 
+                   I wanted to ensure that everything was as organised as it could possibly be. Each section of the website, 
+                   such as the Portfolio, Essay, Design and Blogs has its own dedicated folder that allowed me to separate 
+                   any thematic concerns I may have encountered. Even within these sectioned folders, I still maintained a 
+                   clear separation of folders and layers. For example, within the Design folder:
+                </p>
+                <ul>
+                    <li>
+                        A dedicated folder for the HTML design blogs
+                    </li>
+
+                    <li>
+                        A CSS folder which managed the visual layer for the html pages within the Design folder that differed, 
+                        e.g. the design homepage versus the design reflection page.
+                    </li>
+
+                    <li>
+                        A JavaScript folder that functioned in the same way as the CSS folder, but this time for JavaScript.
+                    </li>
+                </ul>
+                <p>
+                   This setup follows a modular and scalable pattern. After a bit of guidance, I ensured that my naming 
+                   conventions were clear and consistent, using lowercase, sometimes with hyphens, which also helped me 
+                   navigate and update the site efficiently.
                 </p>
 
                 <p>
-                   
+                    May I also note that, while I do think my folder structure was organised and well planned it, it did prove 
+                    to be a challenge to work with, when it came to adding JavaScript interactivity, such as a dynamic navigation 
+                    bar, on the files that were two folders deep. Unfortunately, despite my efforts, I could not figure out how 
+                    to fix my navigation bar on the pages two folders deep . Despite my best efforts, I could not resolve the 
+                    issue of the navigation bar failing to work and load correctly on those pages.
                 </p>
 
                 <p>
-                    
-                </p>
-
-                <p>
-                    
-                </p>
-
-                <p>
-                    
-                </p>
-
-                <p>
-                   
-                </p>
-
-                <p>
-                   
-                </p>
-                
-                <p>
-                   
-                </p>
-
-
-            </section>
-
-            <section data-type="thoughts and reflection-and-thoughts">
-                <h4></h4>
-
-                <p>
-                     
-                </p>
-
-                <p>
-                    
-                </p>
-
-                <p>
-                  
-                     
-                </p>
-
-                <p>
-                     
-                </p>
-
-                <p>
-                   
+                    Although I was advised to use templates elements instead of writing HTML directly in my JS files, I found 
+                    that this approach only added more confusion. I attempted to implement templates as suggested but they 
+                    didn’t resolve my navigation issues, in fact they made things worse by introducing even more complications 
+                    to my existing file structure. Eventually…out of honest frustration (and an existential crisis), I decided 
+                    to leave the template method out and focus on a solution that at least partially worked for my website, even 
+                    if it was not the most optimal one. Sometimes…survival trumps elegance.
                 </p>
             </section>
 
             <section data-type="thoughts and reflection-and-thoughts">
-                <h4></h4>
+                <h4>Semantic Markup</h4>
                 <p>
-                   
+                    My site structure leverages semantic HTML to make the content meaningful to both users and browsers. I have 
+                    used appropriate tags like ‘section’, ‘figure’, ‘figcaption’, ‘article’ and ‘nav’ to define the interface 
+                    elements and improve readability. 
                 </p>
 
                 <p>
-                     
+                    This enhances usability and accessibility, especially for screen readers, by giving better 
+                    context to assistive technologies. For instance, using ‘figcaption’ in my Portfolio helps provide
+                    descriptive support for visual media, while ‘header’ and ‘main’ help in structuring the page layout semantically. 
                 </p>
 
                 <p>
-                   
+                  At first ,I avoided the use of div tags because I did not know where and how to use them, but 
+                  once I started implementing JavaScript, I made use of ‘divs’ to define containers that would be 
+                  manipulated in some way in JS, like the carousel on my homepage or the lightbox container on my portfolio.   
+                </p>
+            </section>
+
+            <section data-type="thoughts and reflection-and-thoughts">
+                <h4>Metadata</h4>
+                <p>
+                   I included essential metadata in my HTML ‘head’ to help browsers interpret my website correctly. I 
+                   did not go too overboard, and included detailed descriptions of each page, and tagged myself as the 
+                   uthor for them all. The current metadata setup effectively guides browsers in rendering the site for 
+                   users on various devices. 
+                </p>
+            </section>
+
+            <section data-type="thoughts and reflection-and-thoughts">
+                <h4>CSS</h4>
+                <p>
+                   All my styling is handled through external CSS files; I made sure to avoid in-line styling. Each content 
+                   section has its own stylesheet and while there is some duplication across files (especially with base 
+                   typography or layout), this allowed me to slightly tweak visual elements to match each section’s tone.
                 </p>
 
                 <p>
-                    
+                     I used flex and grid systems for layout (especially my picText container which I am especially proud of) 
+                     and used media quries to ensure responsiveness across device types. My stylesheets follow a variable-based 
+                     approach for consistency, and I also tried to maintain flexibility for any design customisation that I had 
+                     for the blog, design, portfolio, profile and essay pages.
+                </p>
+            </section>
+
+            <section data-type="thoughts and reflection-and-thoughts">
+                <h4>JavaScript</h4>
+                <p>
+                   I used JavaScript to introduce dynamic, reusable features, like the bottom navigation on the blog, design 
+                   and essay pages. 
+                </p>
+
+                <p>
+                     I received feedback about “code duplication” and “writing everything in a global scope,”. Yes, some 
+                     JavaScript was duplicated across content sections. This was not due to a lack of modular thinking, but 
+                     rather a deliberate organisational decision I made. Each section has a different set of pages, so 
+                     although the script structure is similar, the data arrays and navigation behaviours differ, meaning a 
+                     one-size fits all script would not have worked out of the box without conditional complexity, that would 
+                     have confused me even further and degraded the readability of my code. 
+                </p>
+
+                <p>
+                   Here's why the setup worked for me:
+                </p>
+                <ul>
+                    <li>
+                        Each script was tailored to its section’s content, maintaining UX consistency while offering users 
+                        unique data.
+                    </li>
+
+                    <li>
+                        It fit my folder structure cleanly: scripts were scoped to the folders they belonged to. 
+                    </li>
+
+                    <li>
+                        I avoided inline scripting and used ‘DOMContentLoaded’ events responsibly to encapsulate interactivity
+                    </li>
+                </ul>
+
+                <p>
+                  Still, I acknowledge that the code structure could benefit from modular imports and exports, and hope to 
+                  implement, using JavaScript modules in future projects…or iterations of this website. Refactoring repeated 
+                  logic into shared utility functions and minimising global scope, are areas I now recognise as areas for improvement.   
                 </p>
 
                 <p>  
-                    
+                    I also received feedback regarding my use of variable declarations. Initially I mixed ‘var’,’const’ and 
+                    ‘let’ depending on what “felt right”, and may have still done the same thing within my latest iterations. 
+                    I still do get confused between each variable but do know that through practical application, I am learning 
+                    to understand the importance of choosing the right declaration for each variable’s purpose. In future 
+                    projects, I will stick to ‘const’ for constant variables and leave ‘let’ for variables that truly need it. 
                 </p>
 
                 <p>
-                    
+                    I used JS in my website to make interactive features like :
                 </p>
+                <ul>
+                    <li>
+                        The lightbox gallery for viewing my portfolio items,
+                    </li>
+
+                    <li>
+                        Filtering the different items in my portfolio
+                    </li>
+
+                    <li>
+                        Navigation buttons on blog-like and essay pages
+                    </li>
+                    
+                    <li>
+                        And a carousel on my homepage
+                    </li>
+                </ul>
 
                 <p>
-
+                    All my scripting is also done in external JS files, and I made sure to avoid inline scripting. And I tried 
+                    to clean up a lot of the comments in my code for the final submission, for clarity and readability
                 </p>
             </section>
 
             <section data-type="thoughts and reflection-and-thoughts">
-                <h4></h4>
+                <h4>General Reflection</h4>
                 <p>
-                   
-                </p>
-
-                <p>
-                    
+                   Creating Starfish Galaxy was a huge learning curve in both design and development. While I had strong, initial 
+                   goals around making my website accessible to everyone, reality hit me a bit harder than expected.
                 </p>
 
                 <div class="pictextContainer">
                     <figure>
-                        <img class="u-photo" src="" 
-                        alt="Third wireframe design for" width="390" height="270">
-                        <figcaption> </figcaption>
+                        <img class="u-photo" src="../design-images/reflection-screenshots/fourth-reflection-images/wifi-struggles.png" 
+                        alt="Figure 1: Screenshot example of the live website struggling to loas external API content due to slow or 
+                        unstable internet connection" width="390" height="270">
+                        <figcaption>Figure 1: Screenshot example of the live website struggling to loas external API content due to 
+                            slow or unstable internet connection</figcaption>
                     </figure>
 
                     <p> 
-
+                        I am, honestly, a bit disheartened by that discovery, but also…I want to give myself grace, because it is my 
+                        first website, ever. And I know that every mistake is a chance to learn. This experience has shown me that 
+                        accessibility is not just about semantic HTML or ensuring that my website’s colours contrast well, but it 
+                        is also about the load times, the file sizes and the content prioritisation. These are things that I will 
+                        absolutely work on improving as I build more sites in the future
                     </p>
 
                 </div>
-
-                <p>
-                    
-                </p>
-
-                <p>
-                   
-                </p>
-
-                
-                 <div class="pictextContainer">
-                    <figure>
-                        <img class="u-photo" src="" 
-                        alt="Third wireframe design for" width="390" height="270">
-                        <figcaption> </figcaption>
-                    </figure>
-
-                    <p> 
-
-                    </p>
-
-                </div>
-
-                <p>
-                    
-                </p>
-
-                <p>
-                   
-                </p>
-
-                <p>
-                    The End.
-                </p>
-
-                
             </section>
 
-          <!--Keeping this here for easy use
-                <div class="pictextContainer">
-                    <figure>
-                        <img class="u-photo" src="" 
-                        alt="Third wireframe design for" width="390" height="270">
-                        <figcaption> </figcaption>
-                    </figure>
+            <section data-type="thoughts and reflection-and-thoughts">
+                <h4>Conclusion</h4>
+                <p>
+                   Creating Starfish Galaxy was not only a journey of visual and interactive design, it was also a lesson on how 
+                   user experience influences code structure. I did my best to balance UI customisation, semantic accuracy, 
+                   responsive design and interactive elements, while also learning how to code in JavaScript. 
+                </p>
 
-                    <p> 
+                <p>
+                    I am truly proud of what I have built, and even more excited about how I’ll improve in future projects.
+                </p>
 
-                    </p>
-
-                </div>
-
-                <section data-type="thoughts and reflection-and-thoughts">
-                    <h4></h4>
-                    <p>
-
-                    </p>
-
-                    <p>
-
-                    </p>
-
-                    <p>
-
-                    </p>
-
-                    <p>
-
-                    </p>
-                </section>
-          -->
+                <p>
+                    ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖ bye bye~
+                </p>    
+            </section>
         </article>
-
-        <section data-type="references" class="refe">
-            <h3> References</h3>
-            <ul>
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-    
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-    
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-    
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-    
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-
-                <li class="h-cite">
-                    <cite>
-                        
-                        <a class="u-url" 
-                        href=""> Available here </a>
-                        (Accessed 1 2025)
-                    </cite>
-                </li>
-            </ul> 
-        </section>
 
         <!--USING a div now for the bottom navigation-->
         <div class="botNaviPlaceholder"></div>
